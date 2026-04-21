@@ -1,0 +1,2809 @@
+{
+    "1.2.246.562.20.00000000000000073110": {
+        "id": "1.2.246.562.20.00000000000000073110",
+        "name": "Energia- ja konetekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Insinööritieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073111": {
+        "id": "1.2.246.562.20.00000000000000073111",
+        "name": "Kestävät yhdyskunnat, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Insinööritieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073112": {
+        "id": "1.2.246.562.20.00000000000000073112",
+        "name": "Kiinteistötalous ja geoinformatiikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Insinööritieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073113": {
+        "id": "1.2.246.562.20.00000000000000073113",
+        "name": "Rakennustekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Insinööritieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073101": {
+        "id": "1.2.246.562.20.00000000000000073101",
+        "name": "Kemian tekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Kemian tekniikan korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073114": {
+        "id": "1.2.246.562.20.00000000000000073114",
+        "name": "Informaatioverkostot, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v)",
+        "university": "Aalto-yliopisto",
+        "faculty": "Perustieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073115": {
+        "id": "1.2.246.562.20.00000000000000073115",
+        "name": "Teknillinen fysiikka ja matematiikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Perustieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073116": {
+        "id": "1.2.246.562.20.00000000000000073116",
+        "name": "Teknillinen psykologia, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Perustieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073117": {
+        "id": "1.2.246.562.20.00000000000000073117",
+        "name": "Tietotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Perustieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073118": {
+        "id": "1.2.246.562.20.00000000000000073118",
+        "name": "Tuotantotalous, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Perustieteiden korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073108": {
+        "id": "1.2.246.562.20.00000000000000073108",
+        "name": "Automaatio ja robotiikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Sähkötekniikan korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073102": {
+        "id": "1.2.246.562.20.00000000000000073102",
+        "name": "Bioinformaatioteknologia, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Sähkötekniikan korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000072850": {
+        "id": "1.2.246.562.20.00000000000000072850",
+        "name": "Elektroniikka ja sähköfysiikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Sähkötekniikan korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073109": {
+        "id": "1.2.246.562.20.00000000000000073109",
+        "name": "Informaatioteknologia, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Sähkötekniikan korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000072854": {
+        "id": "1.2.246.562.20.00000000000000072854",
+        "name": "Sähköenergiatekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Aalto-yliopisto",
+        "faculty": "Sähkötekniikan korkeakoulu",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077145": {
+        "id": "1.2.246.562.20.00000000000000077145",
+        "name": "Fysikaalisten tieteiden kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077146": {
+        "id": "1.2.246.562.20.00000000000000077146",
+        "name": "Kemian kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077147": {
+        "id": "1.2.246.562.20.00000000000000077147",
+        "name": "Matemaattisten tieteiden kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077148": {
+        "id": "1.2.246.562.20.00000000000000077148",
+        "name": "Matematiikan, fysiikan ja kemian opettajan kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077151": {
+        "id": "1.2.246.562.20.00000000000000077151",
+        "name": "Tietojenkäsittelytieteen kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077762": {
+        "id": "1.2.246.562.20.00000000000000077762",
+        "name": "Aineenopettaja ja luokanopettaja, matematiikka, fysiikka tai kemia, Joensuu, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077766": {
+        "id": "1.2.246.562.20.00000000000000077766",
+        "name": "Aineenopettaja, matematiikka, fysiikka, kemia tai tietojenkäsittelytiede, Joensuu, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000081239": {
+        "id": "1.2.246.562.20.00000000000000081239",
+        "name": "Datatekniikka, Joensuu, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077382": {
+        "id": "1.2.246.562.20.00000000000000077382",
+        "name": "Fotoniikka, Joensuu, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077533": {
+        "id": "1.2.246.562.20.00000000000000077533",
+        "name": "Kemia, Joensuu, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077697": {
+        "id": "1.2.246.562.20.00000000000000077697",
+        "name": "Kestävät teknologiat, Joensuu, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077565": {
+        "id": "1.2.246.562.20.00000000000000077565",
+        "name": "Matematiikka, Joensuu, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077609": {
+        "id": "1.2.246.562.20.00000000000000077609",
+        "name": "Tietojenkäsittelytiede, Joensuu, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000081227": {
+        "id": "1.2.246.562.20.00000000000000081227",
+        "name": "Datatekniikka, Kuopio, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077686": {
+        "id": "1.2.246.562.20.00000000000000077686",
+        "name": "Teknillinen fysiikka, Kuopio, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077677": {
+        "id": "1.2.246.562.20.00000000000000077677",
+        "name": "Tietojenkäsittelytiede, Kuopio, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000083647": {
+        "id": "1.2.246.562.20.00000000000000083647",
+        "name": "Teknologiajohtaminen, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Informaatioteknologian tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000083648": {
+        "id": "1.2.246.562.20.00000000000000083648",
+        "name": "Tieto- ja ohjelmistotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Informaatioteknologian tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000083649": {
+        "id": "1.2.246.562.20.00000000000000083649",
+        "name": "Tietojenkäsittelytieteen kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Informaatioteknologian tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000082502": {
+        "id": "1.2.246.562.20.00000000000000082502",
+        "name": "Fysiikan aineenopettajan kandidaatti - ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000082506": {
+        "id": "1.2.246.562.20.00000000000000082506",
+        "name": "Fysiikan kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000082618": {
+        "id": "1.2.246.562.20.00000000000000082618",
+        "name": "Kemian tai kemian aineenopettajan kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000082621": {
+        "id": "1.2.246.562.20.00000000000000082621",
+        "name": "Matematiikan aineenopettajan kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000082624": {
+        "id": "1.2.246.562.20.00000000000000082624",
+        "name": "Matematiikan kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000082640": {
+        "id": "1.2.246.562.20.00000000000000082640",
+        "name": "Nanotieteen monialainen kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000082647": {
+        "id": "1.2.246.562.20.00000000000000082647",
+        "name": "Tilastotieteen ja datatieteen kandidaatti- ja DI-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000082652": {
+        "id": "1.2.246.562.20.00000000000000082652",
+        "name": "Turvallisuusteknologian kandidaatti- ja DI-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077703": {
+        "id": "1.2.246.562.20.00000000000000077703",
+        "name": "Energiatekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077717": {
+        "id": "1.2.246.562.20.00000000000000077717",
+        "name": "Kemiantekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077726": {
+        "id": "1.2.246.562.20.00000000000000077726",
+        "name": "Konetekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077729": {
+        "id": "1.2.246.562.20.00000000000000077729",
+        "name": "Laskennallinen tiede ja tekoäly, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077725": {
+        "id": "1.2.246.562.20.00000000000000077725",
+        "name": "Sähkötekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077732": {
+        "id": "1.2.246.562.20.00000000000000077732",
+        "name": "Tietotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077734": {
+        "id": "1.2.246.562.20.00000000000000077734",
+        "name": "Tuotantotalous, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077735": {
+        "id": "1.2.246.562.20.00000000000000077735",
+        "name": "Ympäristötekniikka, tekniikan kandidaatti ja diplomi-insinööri  (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073945": {
+        "id": "1.2.246.562.20.00000000000000073945",
+        "name": "Fysiikka, Fysikaalisten tieteiden tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000080294": {
+        "id": "1.2.246.562.20.00000000000000080294",
+        "name": "Matematiikka ja datatiede, Matemaattisten tieteiden tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073950": {
+        "id": "1.2.246.562.20.00000000000000073950",
+        "name": "Kemia, Kemian tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000074110": {
+        "id": "1.2.246.562.20.00000000000000074110",
+        "name": "Konetekniikka, Konetekniikan tutkinto-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Oulun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000078139": {
+        "id": "1.2.246.562.20.00000000000000078139",
+        "name": "Prosessitekniikka, Prosessitekniikan tutkinto-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Oulun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000074113": {
+        "id": "1.2.246.562.20.00000000000000074113",
+        "name": "Rakennus- ja yhdyskuntatekniikka, Rakennus- ja yhdyskuntatekniikan tutkinto-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Oulun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000074114": {
+        "id": "1.2.246.562.20.00000000000000074114",
+        "name": "Tuotantotalous, Tuotantotalouden tutkinto-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Oulun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000074116": {
+        "id": "1.2.246.562.20.00000000000000074116",
+        "name": "Ympäristötekniikka, Ympäristötekniikan tutkinto-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Oulun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075780": {
+        "id": "1.2.246.562.20.00000000000000075780",
+        "name": "Elektroniikan ja tietoliikennetekniikan tutkinto-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Oulun yliopisto",
+        "faculty": "Tieto- ja sähkötekniikan tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000074103": {
+        "id": "1.2.246.562.20.00000000000000074103",
+        "name": "Lääketieteen tekniikka, Lääketieteen tekniikan tutkinto-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Oulun yliopisto",
+        "faculty": "Tieto- ja sähkötekniikan tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000074104": {
+        "id": "1.2.246.562.20.00000000000000074104",
+        "name": "Tietojenkäsittelytiede, Tietojenkäsittelytieteiden tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Tieto- ja sähkötekniikan tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000074105": {
+        "id": "1.2.246.562.20.00000000000000074105",
+        "name": "Tietotekniikka, Tietotekniikan tutkinto-ohjelma, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Oulun yliopisto",
+        "faculty": "Tieto- ja sähkötekniikan tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000072836": {
+        "id": "1.2.246.562.20.00000000000000072836",
+        "name": "Energiamurroksen koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000076476": {
+        "id": "1.2.246.562.20.00000000000000076476",
+        "name": "Matematiikan ja tilastollisen data-analyysin koulutus, Luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077355": {
+        "id": "1.2.246.562.20.00000000000000077355",
+        "name": "Sähkötekniikka, Tieto- ja sähkötekniikan koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000076480": {
+        "id": "1.2.246.562.20.00000000000000076480",
+        "name": "Tietojenkäsittelytieteiden koulutus, Luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000076524": {
+        "id": "1.2.246.562.20.00000000000000076524",
+        "name": "Tietotekniikka, Tieto- ja sähkötekniikan koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000073138": {
+        "id": "1.2.246.562.20.00000000000000073138",
+        "name": "Tietojohtaminen, Teknis-taloudellinen koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Johtamisen ja talouden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000076532": {
+        "id": "1.2.246.562.20.00000000000000076532",
+        "name": "Tuotantotalous, Teknis-taloudellinen koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Johtamisen ja talouden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000076536": {
+        "id": "1.2.246.562.20.00000000000000076536",
+        "name": "Bioteknologian ja biolääketieteen tekniikan koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Lääketieteen ja terveysteknologian tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000072778": {
+        "id": "1.2.246.562.20.00000000000000072778",
+        "name": "Rakennustekniikan koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Rakennetun ympäristön tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000083105": {
+        "id": "1.2.246.562.20.00000000000000083105",
+        "name": "Automaatiotekniikka, Teknisten tieteiden koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Tekniikan ja luonnontieteiden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000076453": {
+        "id": "1.2.246.562.20.00000000000000076453",
+        "name": "Konetekniikka, Teknisten tieteiden koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Tekniikan ja luonnontieteiden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000072783": {
+        "id": "1.2.246.562.20.00000000000000072783",
+        "name": "Matemaattisten aineiden DI-opettajankoulutus, Tekniikan ja luonnontieteiden koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Tekniikan ja luonnontieteiden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077639": {
+        "id": "1.2.246.562.20.00000000000000077639",
+        "name": "Materiaalitekniikka, Teknisten tieteiden koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Tekniikan ja luonnontieteiden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000072789": {
+        "id": "1.2.246.562.20.00000000000000072789",
+        "name": "Robotiikan koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Tekniikan ja luonnontieteiden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000072808": {
+        "id": "1.2.246.562.20.00000000000000072808",
+        "name": "Teknis-luonnontieteellinen, Tekniikan ja luonnontieteiden koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Tekniikan ja luonnontieteiden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000072823": {
+        "id": "1.2.246.562.20.00000000000000072823",
+        "name": "Ympäristö-, energia- ja biotekniikka, Tekniikan ja luonnontieteiden koulutus, Tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Tampereen yliopisto",
+        "faculty": "Tekniikan ja luonnontieteiden tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075654": {
+        "id": "1.2.246.562.20.00000000000000075654",
+        "name": "Fysikaaliset tieteet, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075656": {
+        "id": "1.2.246.562.20.00000000000000075656",
+        "name": "Kemia, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075658": {
+        "id": "1.2.246.562.20.00000000000000075658",
+        "name": "Matematiikan, fysiikan tai kemian aineenopettaja ja luokanopettaja, luonnontieteiden kandidaatti ja filosofian maisteri (3 v +2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075659": {
+        "id": "1.2.246.562.20.00000000000000075659",
+        "name": "Matematiikka ja tilastotiede, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075663": {
+        "id": "1.2.246.562.20.00000000000000075663",
+        "name": "Automaatiotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075667": {
+        "id": "1.2.246.562.20.00000000000000075667",
+        "name": "Biotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075668": {
+        "id": "1.2.246.562.20.00000000000000075668",
+        "name": "Elintarviketekniikka,  tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) DIA-valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075670": {
+        "id": "1.2.246.562.20.00000000000000075670",
+        "name": "Konetekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075671": {
+        "id": "1.2.246.562.20.00000000000000075671",
+        "name": "Lääketieteellinen tekniikka ja terveysteknologia, tekniikan kandidaatti ja diplomi-insinööri (3v + 2v), DIA-valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077946": {
+        "id": "1.2.246.562.20.00000000000000077946",
+        "name": "Materiaalitekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075674": {
+        "id": "1.2.246.562.20.00000000000000075674",
+        "name": "Tietojenkäsittelytiede, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075675": {
+        "id": "1.2.246.562.20.00000000000000075675",
+        "name": "Tietotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000075676": {
+        "id": "1.2.246.562.20.00000000000000075676",
+        "name": "Tuotantotalous, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v), DIA-valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000081944": {
+        "id": "1.2.246.562.20.00000000000000081944",
+        "name": "Automaatio ja tietotekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Vaasan yliopisto",
+        "faculty": "Tekniikan ja innovaatiojohtamisen yksikkö",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000081938": {
+        "id": "1.2.246.562.20.00000000000000081938",
+        "name": "Data-arkkitehtuuri, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Vaasan yliopisto",
+        "faculty": "Tekniikan ja innovaatiojohtamisen yksikkö",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000081840": {
+        "id": "1.2.246.562.20.00000000000000081840",
+        "name": "Sähkö- ja energiatekniikka, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Vaasan yliopisto",
+        "faculty": "Tekniikan ja innovaatiojohtamisen yksikkö",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000081878": {
+        "id": "1.2.246.562.20.00000000000000081878",
+        "name": "Tuotantotalous, tekniikan kandidaatti ja diplomi-insinööri (3 v + 2 v) - DIA-valintayhteistyö",
+        "university": "Vaasan yliopisto",
+        "faculty": "Tekniikan ja innovaatiojohtamisen yksikkö",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000079612": {
+        "id": "1.2.246.562.20.00000000000000079612",
+        "name": "Fysik, Kemi, Matematik, utbildningsprogrammet i naturvetenskaper, kandidat i naturvetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Luonnon- ja terveystieteiden laitos",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000079794": {
+        "id": "1.2.246.562.20.00000000000000079794",
+        "name": "Datateknik, utbildningsprogrammet i informationsteknologi, teknologie kandidat och diplomingenjör, (3+2 år) - DIA-antagningssamarbetet",
+        "university": "Åbo Akademi",
+        "faculty": "Tekniikan ja informaatioteknologian laitos",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000079796": {
+        "id": "1.2.246.562.20.00000000000000079796",
+        "name": "Datavetenskap, utbildningsprogrammet i informationsteknologi, kandidat i naturvetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Tekniikan ja informaatioteknologian laitos",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000079798": {
+        "id": "1.2.246.562.20.00000000000000079798",
+        "name": "Utbildningsprogrammet i kemi- och processteknik, teknologie kandidat och diplomingenjör (3+2 år), DIA-antagningssamarbetet",
+        "university": "Åbo Akademi",
+        "faculty": "Tekniikan ja informaatioteknologian laitos",
+        "exam": "A"
+    },
+    "1.2.246.562.20.00000000000000077096": {
+        "id": "1.2.246.562.20.00000000000000077096",
+        "name": "Molekyylibiotieteiden kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Bio- ja ympäristötieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077097": {
+        "id": "1.2.246.562.20.00000000000000077097",
+        "name": "Eläinlääketieteen kandiohjelma, eläinlääketieteen kandidaatti ja lisensiaatti (3 v + 3 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Eläinlääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077098": {
+        "id": "1.2.246.562.20.00000000000000077098",
+        "name": "Farmaseutin koulutusohjelma, farmaseutti (3 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Farmasian tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000075319": {
+        "id": "1.2.246.562.20.00000000000000075319",
+        "name": "Pf-koulutus, proviisorin koulutusohjelma, proviisori (2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Farmasian tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077099": {
+        "id": "1.2.246.562.20.00000000000000077099",
+        "name": "Proviisorin koulutusohjelma, farmaseutti ja proviisori (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Farmasian tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077134": {
+        "id": "1.2.246.562.20.00000000000000077134",
+        "name": "Hammaslääketiede (opetus suomeksi), lääketieteen ja hammaslääketieteen kandiohjelma, hammaslääketieteen kandidaatti ja lisensiaatti (3 v + 2,5 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077135": {
+        "id": "1.2.246.562.20.00000000000000077135",
+        "name": "Lääketiede (opetus suomeksi), lääketieteen ja hammaslääketieteen kandiohjelma, lääketieteen kandidaatti ja lisensiaatti (3 v + 3 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077136": {
+        "id": "1.2.246.562.20.00000000000000077136",
+        "name": "Medicin (undervisning på svenska), kandidatprogrammet i medicin och odontologi, medicine kandidat och licentiat (3 år + 3 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077164": {
+        "id": "1.2.246.562.20.00000000000000077164",
+        "name": "Biolääketiede, Kuopio, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077183": {
+        "id": "1.2.246.562.20.00000000000000077183",
+        "name": "Farmaseutin koulutusohjelma, Kuopio, farmaseutti (3 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000080197": {
+        "id": "1.2.246.562.20.00000000000000080197",
+        "name": "Hammaslääketieteen koulutusohjelma, Kuopio, hammaslääketieteen kandidaatti ja lisensiaatti (3 v + 2,5 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000080203": {
+        "id": "1.2.246.562.20.00000000000000080203",
+        "name": "Lääketieteen koulutusohjelma, Kuopio, lääketieteen kandidaatti ja lisensiaatti (3 v + 3 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077197": {
+        "id": "1.2.246.562.20.00000000000000077197",
+        "name": "Maisterihaku, Proviisorin koulutusohjelma, Kuopio, proviisori (2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077231": {
+        "id": "1.2.246.562.20.00000000000000077231",
+        "name": "Proviisorin koulutusohjelma, Kuopio, farmaseutti ja proviisori (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077217": {
+        "id": "1.2.246.562.20.00000000000000077217",
+        "name": "Ravitsemustiede, Kuopio, terveystieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000073938": {
+        "id": "1.2.246.562.20.00000000000000073938",
+        "name": "Biokemia, Biokemian tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Biokemian ja molekyylilääketieteen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000074098": {
+        "id": "1.2.246.562.20.00000000000000074098",
+        "name": "Hammaslääketiede, Hammaslääketieteen tutkinto-ohjelma, hammaslääketieteen kandidaatti ja lisensiaatti (3 v + 2,5 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000074097": {
+        "id": "1.2.246.562.20.00000000000000074097",
+        "name": "Lääketiede, Lääketieteen tutkinto-ohjelma, lääketieteen kandidaatti ja lisensiaatti (3 v + 3 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000076428": {
+        "id": "1.2.246.562.20.00000000000000076428",
+        "name": "Bioteknologian ja biolääketieteen tekniikan koulutus, Luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Lääketieteen ja terveysteknologian tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077305": {
+        "id": "1.2.246.562.20.00000000000000077305",
+        "name": "Lääketieteen koulutus, Lääketieteen kandidaatti ja lääketieteen lisensiaatti (3 v + 3 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Lääketieteen ja terveysteknologian tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000075643": {
+        "id": "1.2.246.562.20.00000000000000075643",
+        "name": "Biolääketieteen ja lääkekehityksen tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000075644": {
+        "id": "1.2.246.562.20.00000000000000075644",
+        "name": "Hammaslääketieteen tutkinto-ohjelma, hammaslääketieteen kandidaatti ja lisensiaatti (3 v + 2,5 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000075645": {
+        "id": "1.2.246.562.20.00000000000000075645",
+        "name": "Lääketieteen tutkinto-ohjelma, lääketieteen kandidaatti ja lisensiaatti (3 v + 3 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000075665": {
+        "id": "1.2.246.562.20.00000000000000075665",
+        "name": "Biokemia, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000079778": {
+        "id": "1.2.246.562.20.00000000000000079778",
+        "name": "Kandidatprogrammet i farmaci, farmaceut (3 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Luonnon- ja terveystieteiden laitos",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000079784": {
+        "id": "1.2.246.562.20.00000000000000079784",
+        "name": "Magisterprogrammet i farmaci, provisor (2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Luonnon- ja terveystieteiden laitos",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000079781": {
+        "id": "1.2.246.562.20.00000000000000079781",
+        "name": "Utbildningsprogrammet i farmaci, farmaceut och provisor (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Luonnon- ja terveystieteiden laitos",
+        "exam": "B"
+    },
+    "1.2.246.562.20.00000000000000077089": {
+        "id": "1.2.246.562.20.00000000000000077089",
+        "name": "Biologian kandiohjelma (suomen kielen taitoisille hakijoille), luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Bio- ja ympäristötieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077091": {
+        "id": "1.2.246.562.20.00000000000000077091",
+        "name": "Kandidatprogrammet i biologi (för sökande med kunskaper i svenska), kandidat i naturvetenskaper och filosofie magister (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Bio- ja ympäristötieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077093": {
+        "id": "1.2.246.562.20.00000000000000077093",
+        "name": "Ympäristötieteiden kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Bio- ja ympäristötieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077140": {
+        "id": "1.2.246.562.20.00000000000000077140",
+        "name": "Elintarvike- ja ravitsemustieteiden kandiohjelma, elintarviketieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Maatalous-metsätieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077143": {
+        "id": "1.2.246.562.20.00000000000000077143",
+        "name": "Maataloustieteiden kandiohjelma, maatalous- ja metsätieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Maatalous-metsätieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077144": {
+        "id": "1.2.246.562.20.00000000000000077144",
+        "name": "Metsätieteiden kandiohjelma, maatalous- ja metsätieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Maatalous-metsätieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077149": {
+        "id": "1.2.246.562.20.00000000000000077149",
+        "name": "Geotieteiden kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077150": {
+        "id": "1.2.246.562.20.00000000000000077150",
+        "name": "Maantieteen kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077152": {
+        "id": "1.2.246.562.20.00000000000000077152",
+        "name": "Maantieteen opettaja, maantieteen kandiohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077574": {
+        "id": "1.2.246.562.20.00000000000000077574",
+        "name": "Metsätiede, Joensuu, maatalous- ja metsätieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077511": {
+        "id": "1.2.246.562.20.00000000000000077511",
+        "name": "Ympäristö- ja biotieteet (biologia), Joensuu, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077661": {
+        "id": "1.2.246.562.20.00000000000000077661",
+        "name": "Ympäristö- ja biotieteet (ympäristötiede), Kuopio, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Luonnontieteiden",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000078470": {
+        "id": "1.2.246.562.20.00000000000000078470",
+        "name": "Maantiede ja ympäristöpolitiikka, Joensuu, luonnontieteiden kandidaatti ja filosofian maisteri tai yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000082498": {
+        "id": "1.2.246.562.20.00000000000000082498",
+        "name": "Biologian kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000082644": {
+        "id": "1.2.246.562.20.00000000000000082644",
+        "name": "Ympäristö- ja vesistötieteiden kandidaatti- ja maisteriohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000073940": {
+        "id": "1.2.246.562.20.00000000000000073940",
+        "name": "Biologia, Biologian tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000073953": {
+        "id": "1.2.246.562.20.00000000000000073953",
+        "name": "Maantiede, Maantieteen tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3v + 2v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000073948": {
+        "id": "1.2.246.562.20.00000000000000073948",
+        "name": "Geotieteet, Geotieteiden tutkinto-ohjelma, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Teknillinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000075653": {
+        "id": "1.2.246.562.20.00000000000000075653",
+        "name": "Biologia,  luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000075655": {
+        "id": "1.2.246.562.20.00000000000000075655",
+        "name": "Geologia, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000075657": {
+        "id": "1.2.246.562.20.00000000000000075657",
+        "name": "Maantiede, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000075660": {
+        "id": "1.2.246.562.20.00000000000000075660",
+        "name": "Ympäristötiede, luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000079779": {
+        "id": "1.2.246.562.20.00000000000000079779",
+        "name": "Geologi, utbildningsprogrammet i naturvetenskaper, kandidat i naturvetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Luonnon- ja terveystieteiden laitos",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000079623": {
+        "id": "1.2.246.562.20.00000000000000079623",
+        "name": "Utbildningsprogrammet i biovetenskaper, kandidat i naturvetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Luonnon- ja terveystieteiden laitos",
+        "exam": "C"
+    },
+    "1.2.246.562.20.00000000000000077137": {
+        "id": "1.2.246.562.20.00000000000000077137",
+        "name": "Logopedian kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000075341": {
+        "id": "1.2.246.562.20.00000000000000075341",
+        "name": "Maisterihaku, organisaatiopsykologian maisteriohjelma, filosofian maisteri (2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000075342": {
+        "id": "1.2.246.562.20.00000000000000075342",
+        "name": "Maisterihaku, psykologian maisteriohjelma, psykologian maisteri (2,5 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000075343": {
+        "id": "1.2.246.562.20.00000000000000075343",
+        "name": "Maisterihaku, terveydenhuollon kehittämisen maisteriohjelma, terveystieteiden maisteri (2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000077138": {
+        "id": "1.2.246.562.20.00000000000000077138",
+        "name": "Psykologian kandiohjelma, psykologian kandidaatti ja psykologian maisteri (3 v + 2,5 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000077139": {
+        "id": "1.2.246.562.20.00000000000000077139",
+        "name": "Soveltavan psykologian kandiohjelma ja organisaatiopsykologian maisteriohjelma, psykologian kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000077323": {
+        "id": "1.2.246.562.20.00000000000000077323",
+        "name": "Logopedia, Joensuu, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000077471": {
+        "id": "1.2.246.562.20.00000000000000077471",
+        "name": "Psykologia, Joensuu, psykologian kandidaatti ja maisteri (3 v + 2,5 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000080859": {
+        "id": "1.2.246.562.20.00000000000000080859",
+        "name": "Ergonomia ja työhyvinvointi, Kuopio, terveystieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000077080": {
+        "id": "1.2.246.562.20.00000000000000077080",
+        "name": "Hoitotiede, hoitotieteen maisteriohjelma, Kuopio, terveystieteiden maisteri (2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000080863": {
+        "id": "1.2.246.562.20.00000000000000080863",
+        "name": "Liikuntalääketiede ja terveysliikunta, Kuopio, terveystieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000080867": {
+        "id": "1.2.246.562.20.00000000000000080867",
+        "name": "Väestön terveyden edistäminen, Kuopio, terveystieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Terveystieteiden tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000083374": {
+        "id": "1.2.246.562.20.00000000000000083374",
+        "name": "Psykologian kandidaatti- ja maisteriohjelma, psykologian kandidaatti ja maisteri (3 v + 2,5 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000082000": {
+        "id": "1.2.246.562.20.00000000000000082000",
+        "name": "Liikuntabiologian kandidaatti- ja maisteriohjelma, liikuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000082198": {
+        "id": "1.2.246.562.20.00000000000000082198",
+        "name": "Maisterihaku, fysioterapian maisteriohjelma, terveystieteiden maisteri (2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000082224": {
+        "id": "1.2.246.562.20.00000000000000082224",
+        "name": "Maisterihaku, gerontologian ja kansanterveyden maisteriohjelma, terveystieteiden maisteri (2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000082244": {
+        "id": "1.2.246.562.20.00000000000000082244",
+        "name": "Maisterihaku, liikuntalääketieteen maisteriohjelma, terveystieteiden maisteri (2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000082323": {
+        "id": "1.2.246.562.20.00000000000000082323",
+        "name": "Maisterihaku, terveyden edistämisen maisteriohjelma, terveystieteiden maisteri (2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000082113": {
+        "id": "1.2.246.562.20.00000000000000082113",
+        "name": "Terveystieteiden kandidaatti- ja maisteriohjelma, terveystieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000082100": {
+        "id": "1.2.246.562.20.00000000000000082100",
+        "name": "Valmennustieteen kandidaatti- ja maisteriohjelma, liikuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000082917": {
+        "id": "1.2.246.562.20.00000000000000082917",
+        "name": "Maisterihaku, diagnostisten terveystieteiden maisteriohjelma, filosofian maisteri (2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Matemaattis-luonnontieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000079040": {
+        "id": "1.2.246.562.20.00000000000000079040",
+        "name": "Logopedia, Logopedian tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000074180": {
+        "id": "1.2.246.562.20.00000000000000074180",
+        "name": "Psykologia, psykologian tutkinto-ohjelma, psykologian kandidaatti ja maisteri (3v + 2,5v) / psykologian kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000074100": {
+        "id": "1.2.246.562.20.00000000000000074100",
+        "name": "Maisterihaku, Hoitotiede, Hoitotieteen maisteriohjelma, terveystieteiden maisteri (2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000074101": {
+        "id": "1.2.246.562.20.00000000000000074101",
+        "name": "Maisterihaku, Terveyshallintotiede,Terveyshallintotieteen maisteriohjelma, terveystieteiden maisteri (2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000075742": {
+        "id": "1.2.246.562.20.00000000000000075742",
+        "name": "Terveystieteet, terveystieteiden tutkinto-ohjelma, terveystieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000077291": {
+        "id": "1.2.246.562.20.00000000000000077291",
+        "name": "Kansanterveystieteen koulutus, Terveystieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000076397": {
+        "id": "1.2.246.562.20.00000000000000076397",
+        "name": "Maisterihaku, Kehittävä terveysjohtaminen, Hoitotieteen maisteriohjelma, Terveystieteiden maisteri (2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000076399": {
+        "id": "1.2.246.562.20.00000000000000076399",
+        "name": "Maisterihaku, Terveyspedagogiikka, Hoitotieteen maisteriohjelma, Terveystieteiden maisteri (2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000076543": {
+        "id": "1.2.246.562.20.00000000000000076543",
+        "name": "Psykologian koulutus, Psykologian kandidaatti ja maisteri (3 v + 2,5 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000075392": {
+        "id": "1.2.246.562.20.00000000000000075392",
+        "name": "Maisterihaku, hoitotieteen tutkinto-ohjelma, terveystieteiden maisteri (2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Lääketieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000075721": {
+        "id": "1.2.246.562.20.00000000000000075721",
+        "name": "Logopedia, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Yhteiskuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000075724": {
+        "id": "1.2.246.562.20.00000000000000075724",
+        "name": "Psykologia, psykologian kandidaatti ja psykologian maisteri (3 v + 2,5 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Yhteiskuntatieteellinen tiedekunta",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000079512": {
+        "id": "1.2.246.562.20.00000000000000079512",
+        "name": "Utbildningsprogrammet i logopedi, kandidat i humanistiska vetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000079515": {
+        "id": "1.2.246.562.20.00000000000000079515",
+        "name": "Utbildningsprogrammet i psykologi, psykologie kandidat och magister (3+2,5 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000079783": {
+        "id": "1.2.246.562.20.00000000000000079783",
+        "name": "Utbildningsprogrammet i hälsovetenskaper (Vasa), kandidat i hälsovetenskaper och magister i hälsovetenskaper (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Luonnon- ja terveystieteiden laitos",
+        "exam": "D"
+    },
+    "1.2.246.562.20.00000000000000077122": {
+        "id": "1.2.246.562.20.00000000000000077122",
+        "name": "Erityispedagogiikka, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077127": {
+        "id": "1.2.246.562.20.00000000000000077127",
+        "name": "Klasslärare (undervisning på svenska), pedagogie kandidat och magister (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077123": {
+        "id": "1.2.246.562.20.00000000000000077123",
+        "name": "Kotitaloustiede ja kotitalousopettaja, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077124": {
+        "id": "1.2.246.562.20.00000000000000077124",
+        "name": "Käsityötiede ja käsityönopettaja, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077125": {
+        "id": "1.2.246.562.20.00000000000000077125",
+        "name": "Luokanopettaja (opetus suomeksi), kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077128": {
+        "id": "1.2.246.562.20.00000000000000077128",
+        "name": "Lärare inom småbarnspedagogik (undervisning på svenska), pedagogie kandidat (3 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075338": {
+        "id": "1.2.246.562.20.00000000000000075338",
+        "name": "Maisterihaku, varhaiskasvatus, kasvatustieteiden maisteriohjelma, kasvatustieteen maisteri (2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075339": {
+        "id": "1.2.246.562.20.00000000000000075339",
+        "name": "Maisterihaku, yleinen ja aikuiskasvatustiede (opetus suomeksi), kasvatustieteiden maisteriohjelma, kasvatustieteen maisteri (2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077130": {
+        "id": "1.2.246.562.20.00000000000000077130",
+        "name": "Pedagogik (undervisning på svenska), pedagogie kandidat och magister (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077126": {
+        "id": "1.2.246.562.20.00000000000000077126",
+        "name": "Varhaiskasvatuksen opettaja (opetus suomeksi), kasvatustieteen kandidaatti (3 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077129": {
+        "id": "1.2.246.562.20.00000000000000077129",
+        "name": "Yleinen ja aikuiskasvatustiede (opetus suomeksi), kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Kasvatustieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077298": {
+        "id": "1.2.246.562.20.00000000000000077298",
+        "name": "Erityisluokanopettaja ja erityisopettaja, Joensuu, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077300": {
+        "id": "1.2.246.562.20.00000000000000077300",
+        "name": "Erityisopettaja, Joensuu, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077302": {
+        "id": "1.2.246.562.20.00000000000000077302",
+        "name": "Kasvatustiede ja aikuiskasvatustiede, Joensuu, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077307": {
+        "id": "1.2.246.562.20.00000000000000077307",
+        "name": "Kotitalousopettaja, Joensuu, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077321": {
+        "id": "1.2.246.562.20.00000000000000077321",
+        "name": "Käsityönopettaja, Joensuu, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077324": {
+        "id": "1.2.246.562.20.00000000000000077324",
+        "name": "Luokanopettaja, Joensuu, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077452": {
+        "id": "1.2.246.562.20.00000000000000077452",
+        "name": "Opinto-ohjaaja ja uraohjaaja, Joensuu, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077474": {
+        "id": "1.2.246.562.20.00000000000000077474",
+        "name": "Varhaiskasvatuksen opettaja, Joensuu, kasvatustieteen kandidaatti (3 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077476": {
+        "id": "1.2.246.562.20.00000000000000077476",
+        "name": "Varhaiskasvatuksen opettaja, Joensuu, kasvatustieteen kandidaatti ja maisteri ( 3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000083408": {
+        "id": "1.2.246.562.20.00000000000000083408",
+        "name": "Erityispedagogiikan kandidaatti- ja maisteriohjelma (erityisopettaja ja erityisluokanopettaja), kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000083512": {
+        "id": "1.2.246.562.20.00000000000000083512",
+        "name": "Kasvatustieteen ja aikuiskasvatustieteen kandidaatti- ja maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000083420": {
+        "id": "1.2.246.562.20.00000000000000083420",
+        "name": "Luokanopettajan kandidaatti- ja maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000083429": {
+        "id": "1.2.246.562.20.00000000000000083429",
+        "name": "Luokanopettajan kandidaatti- ja maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v), S2-taustaisten valintaväylä",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000083432": {
+        "id": "1.2.246.562.20.00000000000000083432",
+        "name": "Varhaiskasvatuksen opettajan kandidaattiohjelma ja varhaiskasvatuksen maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000083433": {
+        "id": "1.2.246.562.20.00000000000000083433",
+        "name": "Varhaiskasvatuksen opettajan kandidaattiohjelma ja varhaiskasvatuksen maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v), S2-taustaisten valintaväylä",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000083180": {
+        "id": "1.2.246.562.20.00000000000000083180",
+        "name": "Liikuntapedagogiikan kandidaatti- ja maisteriohjelma, liikuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000082587": {
+        "id": "1.2.246.562.20.00000000000000082587",
+        "name": "Erityisopettajan kandidaatti- ja maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v), 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000082503": {
+        "id": "1.2.246.562.20.00000000000000082503",
+        "name": "Kasvatusalan kandidaatti- ja maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v), 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000082511": {
+        "id": "1.2.246.562.20.00000000000000082511",
+        "name": "Kestävyyskasvatuksen kandidaatti- ja maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v), 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000082584": {
+        "id": "1.2.246.562.20.00000000000000082584",
+        "name": "Luokanopettajan kandidaatti- ja maisteriohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v), 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000073891": {
+        "id": "1.2.246.562.20.00000000000000073891",
+        "name": "Erityisopettaja ja erityisluokanopettaja, Erityispedagogiikan tutkinto-ohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000073892": {
+        "id": "1.2.246.562.20.00000000000000073892",
+        "name": "Interkulttuurinen luokanopettaja, Interkulttuurinen luokanopettajan tutkinto-ohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000073893": {
+        "id": "1.2.246.562.20.00000000000000073893",
+        "name": "Luokanopettaja, Luokanopettajan tutkinto-ohjelma, kasvatustieteen kandidaatti ja maisteri (3v+2v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000073894": {
+        "id": "1.2.246.562.20.00000000000000073894",
+        "name": "Musiikkikasvatus, Musiikkikasvatuksen tutkinto-ohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000073896": {
+        "id": "1.2.246.562.20.00000000000000073896",
+        "name": "Oppimistieteet, Oppimistieteiden tutkinto-ohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000079553": {
+        "id": "1.2.246.562.20.00000000000000079553",
+        "name": "Varhaiskasvatus, Varhaiskasvatuksen tutkinto-ohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v), monimuotokoulutus",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000073897": {
+        "id": "1.2.246.562.20.00000000000000073897",
+        "name": "Varhaiskasvatus, Varhaiskasvatuksen tutkinto-ohjelma, kasvatustieteen kandidaatti ja maisteri (3v+2v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000073899": {
+        "id": "1.2.246.562.20.00000000000000073899",
+        "name": "Yleinen kasvatustiede, Yleisen kasvatustieteen tutkinto-ohjelma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kasvatustieteiden ja psykologian tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000077031": {
+        "id": "1.2.246.562.20.00000000000000077031",
+        "name": "Elinikäinen oppiminen ja kasvatus, Kasvatustieteiden koulutus, Kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Kasvatustieteiden ja kulttuurin tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000076445": {
+        "id": "1.2.246.562.20.00000000000000076445",
+        "name": "Erityisopettaja, Kasvatustieteiden koulutus, Kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Kasvatustieteiden ja kulttuurin tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000076447": {
+        "id": "1.2.246.562.20.00000000000000076447",
+        "name": "Luokanopettaja, Kasvatustieteiden koulutus, Kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Kasvatustieteiden ja kulttuurin tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000083350": {
+        "id": "1.2.246.562.20.00000000000000083350",
+        "name": "Varhaiskasvatuksen opettaja, Kasvatustieteiden koulutus, Kasvatustieteen kandidaatti (3 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Kasvatustieteiden ja kulttuurin tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075634": {
+        "id": "1.2.246.562.20.00000000000000075634",
+        "name": "Erityisopettajan tutkinto-ohjelma, Turku, kasvatustieteen kandidaatti ja kasvatustieteen maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075635": {
+        "id": "1.2.246.562.20.00000000000000075635",
+        "name": "Kasvatustieteiden tutkinto-ohjelma, Turku, kasvatustieteen kandidaatti ja kasvatustieteen maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075636": {
+        "id": "1.2.246.562.20.00000000000000075636",
+        "name": "Luokanopettajan tutkinto-ohjelma, Turku, kasvatustieteen kandidaatti ja kasvatustieteen maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075386": {
+        "id": "1.2.246.562.20.00000000000000075386",
+        "name": "Maisterihaku, kasvatustieteiden tutkinto-ohjelma, Turku, kasvatustieteen maisteri (2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075387": {
+        "id": "1.2.246.562.20.00000000000000075387",
+        "name": "Maisterihaku, luokanopettajan tutkinto-ohjelma, Turku, kasvatustieteen maisteri (2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075640": {
+        "id": "1.2.246.562.20.00000000000000075640",
+        "name": "Varhaiskasvatuksen opettajan tutkinto-ohjelma, Turku, kasvatustieteen kandidaatti (3 v), monimuotokoulutus varhaiskasvatuksen opettajaksi",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075638": {
+        "id": "1.2.246.562.20.00000000000000075638",
+        "name": "Käsityön aineenopettajan tutkinto-ohjelma, Rauma, kasvatustieteen kandidaatti ja kasvatustieteen maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075639": {
+        "id": "1.2.246.562.20.00000000000000075639",
+        "name": "Luokanopettajan tutkinto-ohjelma, Rauma, kasvatustieteen kandidaatti ja kasvatustieteen maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075389": {
+        "id": "1.2.246.562.20.00000000000000075389",
+        "name": "Maisterihaku, kasvatustieteen (varhaiskasvatus) maisteriohjelma, Rauma, kasvatustieteen maisteri (2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075390": {
+        "id": "1.2.246.562.20.00000000000000075390",
+        "name": "Maisterihaku, luokanopettajan tutkinto-ohjelma, Rauma, kasvatustieteen maisteri (2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075637": {
+        "id": "1.2.246.562.20.00000000000000075637",
+        "name": "Varhaiskasvatuksen opettajan tutkinto-ohjelma, Rauma, kasvatustieteen kandidaatti (3 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000075641": {
+        "id": "1.2.246.562.20.00000000000000075641",
+        "name": "Varhaiskasvatuksen opettajan tutkinto-ohjelma, Rauma, kasvatustieteen kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Kasvatustieteiden tiedekunta",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000079788": {
+        "id": "1.2.246.562.20.00000000000000079788",
+        "name": "Hushållsvetenskap: Utbildningsprogrammet för slöjdvetenskap och hushållsvetenskap (Vasa), pedagogie kandidat och pedagogie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Kasvatustieteiden laitos",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000079789": {
+        "id": "1.2.246.562.20.00000000000000079789",
+        "name": "Slöjdvetenskap: Utbildningsprogrammet för slöjdvetenskap och hushållsvetenskap (Vasa), pedagogie kandidat och pedagogie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Kasvatustieteiden laitos",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000079790": {
+        "id": "1.2.246.562.20.00000000000000079790",
+        "name": "Utbildningsprogrammet för klasslärare (Vasa), pedagogie kandidat och pedagogie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Kasvatustieteiden laitos",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000079791": {
+        "id": "1.2.246.562.20.00000000000000079791",
+        "name": "Utbildningsprogrammet för lärare inom småbarnspedagogik (Vasa), pedagogie kandidat och pedagogie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Kasvatustieteiden laitos",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000079792": {
+        "id": "1.2.246.562.20.00000000000000079792",
+        "name": "Utbildningsprogrammet för pedagogiskt ledarskap och utvecklingsarbete (Vasa), pedagogie kandidat och pedagogie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Kasvatustieteiden laitos",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000079793": {
+        "id": "1.2.246.562.20.00000000000000079793",
+        "name": "Utbildningsprogrammet för speciallärare (Vasa), pedagogie kandidat och pedagogie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Kasvatustieteiden laitos",
+        "exam": "E"
+    },
+    "1.2.246.562.20.00000000000000073100": {
+        "id": "1.2.246.562.20.00000000000000073100",
+        "name": "Kauppatieteet, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
+        "university": "Aalto-yliopisto",
+        "faculty": "Kauppakorkeakoulu",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000077141": {
+        "id": "1.2.246.562.20.00000000000000077141",
+        "name": "Elintarviketalouden ja kulutuksen kandiohjelma, elintarviketieteiden kandidaatti ja maisteri tai maatalous- ja metsätieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Maatalous-metsätieteellinen tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000077142": {
+        "id": "1.2.246.562.20.00000000000000077142",
+        "name": "Ympäristön ja maatalouden taloustieteen kandiohjelma, maatalous- ja metsätieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Maatalous-metsätieteellinen tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000077202": {
+        "id": "1.2.246.562.20.00000000000000077202",
+        "name": "Taloustieteen kandiohjelma, valtiotieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Valtiotieteellinen tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000078863": {
+        "id": "1.2.246.562.20.00000000000000078863",
+        "name": "Kauppatieteet, Joensuu, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000077366": {
+        "id": "1.2.246.562.20.00000000000000077366",
+        "name": "Liiketaloustiede ja tietojenkäsittelytiede, Joensuu, kauppatieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000078875": {
+        "id": "1.2.246.562.20.00000000000000078875",
+        "name": "Kauppatieteet, Kuopio, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000077362": {
+        "id": "1.2.246.562.20.00000000000000077362",
+        "name": "Liiketaloustiede ja tietojenkäsittelytiede, Kuopio, kauppatieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000078467": {
+        "id": "1.2.246.562.20.00000000000000078467",
+        "name": "Taloustiede, Kuopio, yhteiskuntatieteiden kandidaatti (3 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000083589": {
+        "id": "1.2.246.562.20.00000000000000083589",
+        "name": "Tietojärjestelmätieteen kandidaatti- ja maisteriohjelma, kauppatieteiden kandidaatti ja maisteri (3 v+ 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Informaatioteknologian tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000082231": {
+        "id": "1.2.246.562.20.00000000000000082231",
+        "name": "Kauppatieteiden kandidaatti- ja maisteriohjelma, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Jyväskylän yliopiston kauppakorkeakoulu (JSBE)",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000082272": {
+        "id": "1.2.246.562.20.00000000000000082272",
+        "name": "Taloustieteen kandidaatti- ja maisteriohjelma, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Jyväskylän yliopiston kauppakorkeakoulu (JSBE)",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000080959": {
+        "id": "1.2.246.562.20.00000000000000080959",
+        "name": "Kauppatieteet, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v), Kauppatieteellisen alan valintayhteistyö",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000073927": {
+        "id": "1.2.246.562.20.00000000000000073927",
+        "name": "Kauppatieteet, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
+        "university": "Oulun yliopisto",
+        "faculty": "Kauppakorkeakoulu",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000077876": {
+        "id": "1.2.246.562.20.00000000000000077876",
+        "name": "Ekonomi, ekonomie kandidat och ekonomie magister (3 år + 2 år), Helsingfors",
+        "university": "Svenska handelshögskolan",
+        "faculty": "Hanken Helsingfors",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000077879": {
+        "id": "1.2.246.562.20.00000000000000077879",
+        "name": "Ekonomi, ekonomie kandidat och ekonomie magister (3 år + 2 år), Vasa",
+        "university": "Svenska handelshögskolan",
+        "faculty": "Hanken Vasa",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000076529": {
+        "id": "1.2.246.562.20.00000000000000076529",
+        "name": "Kauppatieteiden koulutus (Kauppatieteellisen alan valintayhteistyö), Kauppatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Johtamisen ja talouden tiedekunta",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000075712": {
+        "id": "1.2.246.562.20.00000000000000075712",
+        "name": "Kauppatieteet, Turku, kauppatieteiden kandidaatti ja kauppatieteiden maisteri (3 v + 2 v), Kauppatieteellisen alan valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Turun kauppakorkeakoulu",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000075714": {
+        "id": "1.2.246.562.20.00000000000000075714",
+        "name": "Taloustiede, valtiotieteiden kandidaatti ja valtiotieteiden maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Turun kauppakorkeakoulu",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000075717": {
+        "id": "1.2.246.562.20.00000000000000075717",
+        "name": "Kauppatieteet, Pori, kauppatieteiden kandidaatti ja kauppatieteiden maisteri (3 v + 2 v), Kauppatieteellisen alan valintayhteistyö",
+        "university": "Turun yliopisto",
+        "faculty": "Turun kauppakorkeakoulu",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000083228": {
+        "id": "1.2.246.562.20.00000000000000083228",
+        "name": "Kauppatieteet, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v) (Kauppatieteellisen alan valintayhteistyö)",
+        "university": "Vaasan yliopisto",
+        "faculty": "Kauppatieteellinen ala",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000083218": {
+        "id": "1.2.246.562.20.00000000000000083218",
+        "name": "Kyberjohtaminen, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Vaasan yliopisto",
+        "faculty": "Tekniikan ja innovaatiojohtamisen yksikkö",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000082233": {
+        "id": "1.2.246.562.20.00000000000000082233",
+        "name": "Tuotantotalous, kauppatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Vaasan yliopisto",
+        "faculty": "Tekniikan ja innovaatiojohtamisen yksikkö",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000079771": {
+        "id": "1.2.246.562.20.00000000000000079771",
+        "name": "Utbildningsprogrammet i ekonomi (Åbo), ekonomie kandidat och ekonomie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Talous- ja oikeustieteiden laitos",
+        "exam": "F"
+    },
+    "1.2.246.562.20.00000000000000077153": {
+        "id": "1.2.246.562.20.00000000000000077153",
+        "name": "Oikeusnotaarin koulutusohjelma (opetus Helsingissä suomeksi), oikeusnotaari ja oikeustieteen maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Oikeustieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077155": {
+        "id": "1.2.246.562.20.00000000000000077155",
+        "name": "Utbildningsprogrammet för rättsnotarie (undervisning i Helsingfors på svenska), rättsnotarie och juris magister (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Oikeustieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077154": {
+        "id": "1.2.246.562.20.00000000000000077154",
+        "name": "Oikeusnotaarin koulutusohjelma, opetus Vaasassa suomeksi ja ruotsiksi (suomen kielen taitoisille hakijoille), oikeusnotaari ja oikeustieteen maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Oikeustieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077156": {
+        "id": "1.2.246.562.20.00000000000000077156",
+        "name": "Utbildningsprogrammet för rättsnotarie, undervisning i Vasa på svenska och finska (för sökande med kunskaper i svenska), rättsnotarie och juris magister (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Oikeustieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077186": {
+        "id": "1.2.246.562.20.00000000000000077186",
+        "name": "Kandidatprogrammet i samhällsvetenskaper (avläggs på svenska), journalistik och kommunikation, rättsvetenskap, socialpsykologi, sociologi, statskunskap med förvaltning, politices kandidat (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Svenska social- och kommunalhögskolan vid Helsingfors universitet",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077188": {
+        "id": "1.2.246.562.20.00000000000000077188",
+        "name": "Socialt arbete, kandidatprogrammet i samhällsvetenskaper (avläggs på svenska), politices kandidat (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Svenska social- och kommunalhögskolan vid Helsingfors universitet",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077196": {
+        "id": "1.2.246.562.20.00000000000000077196",
+        "name": "Kriminologia, sosiaalipsykologia, sosiologia ja yhteiskuntapolitiikka, sosiaalitieteiden kandiohjelma, valtiotieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Valtiotieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000075355": {
+        "id": "1.2.246.562.20.00000000000000075355",
+        "name": "Maisterihaku, sosiaali- ja terveystutkimuksen ja -johtamisen maisteriohjelma, valtiotieteiden maisteri (2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Valtiotieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077192": {
+        "id": "1.2.246.562.20.00000000000000077192",
+        "name": "Politiikan ja viestinnän kandiohjelma, valtiotieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Valtiotieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077199": {
+        "id": "1.2.246.562.20.00000000000000077199",
+        "name": "Sosiaalityö, sosiaalitieteiden kandiohjelma, valtiotieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Valtiotieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077208": {
+        "id": "1.2.246.562.20.00000000000000077208",
+        "name": "Yhteiskunnallisen muutoksen kandiohjelma, valtiotieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Valtiotieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000080938": {
+        "id": "1.2.246.562.20.00000000000000080938",
+        "name": "Viestintätieteet, Joensuu, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077045": {
+        "id": "1.2.246.562.20.00000000000000077045",
+        "name": "Julkisoikeus, Joensuu, hallintotieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000078542": {
+        "id": "1.2.246.562.20.00000000000000078542",
+        "name": "Oikeustiede, Joensuu, oikeusnotaari ja oikeustieteen maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000078848": {
+        "id": "1.2.246.562.20.00000000000000078848",
+        "name": "Yhteiskuntatieteet (sosiaalipedagogiikka, sosiologia, yhteiskuntapolitiikka), Joensuu, yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000078744": {
+        "id": "1.2.246.562.20.00000000000000078744",
+        "name": "Sosiaalipsykologia, Kuopio, yhteiskuntatieteiden kandidaatti  ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000078807": {
+        "id": "1.2.246.562.20.00000000000000078807",
+        "name": "Sosiaalityö, Kuopio, yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000082901": {
+        "id": "1.2.246.562.20.00000000000000082901",
+        "name": "Journalistiikan kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000083349": {
+        "id": "1.2.246.562.20.00000000000000083349",
+        "name": "Sosiaalityön kandidaatti- ja maisteriohjelma, yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000083243": {
+        "id": "1.2.246.562.20.00000000000000083243",
+        "name": "Viestinnän kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000083348": {
+        "id": "1.2.246.562.20.00000000000000083348",
+        "name": "Yhteiskuntatieteiden ja filosofian kandidaatti- ja maisteriohjelma, yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000081964": {
+        "id": "1.2.246.562.20.00000000000000081964",
+        "name": "Liikunnan yhteiskuntatieteiden kandidaatti- ja maisteriohjelma, liikuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000081974": {
+        "id": "1.2.246.562.20.00000000000000081974",
+        "name": "Maisterihaku, liikunnan yhteiskuntatieteiden maisteriohjelma, liikuntatieteiden maisteri (2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Liikuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000082161": {
+        "id": "1.2.246.562.20.00000000000000082161",
+        "name": "Oikeustiede, oikeusnotaari ja oikeustieteen maisteri (3 v + 2 v), Rovaniemi, 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Oikeustieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000082003": {
+        "id": "1.2.246.562.20.00000000000000082003",
+        "name": "Hallintotieteiden ja johtamisen tutkinto-ohjelma, hallintotieteiden tai yhteiskuntatieteiden kandidaatti ja hallintotieteiden tai yhteiskuntatieteiden maisteri (3 v + 2 v), 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000082008": {
+        "id": "1.2.246.562.20.00000000000000082008",
+        "name": "Matkailututkimuksen tutkinto-ohjelma, yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v), 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000082005": {
+        "id": "1.2.246.562.20.00000000000000082005",
+        "name": "Politiikkatieteiden ja sosiologian tutkinto-ohjelma, yhteiskuntatieteiden kandidaatti ja maisteri  (3 v + 2 v), 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000082013": {
+        "id": "1.2.246.562.20.00000000000000082013",
+        "name": "Sosiaalityön tutkinto-ohjelma, yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v),  Rovaniemi, 2026",
+        "university": "Lapin yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000081115": {
+        "id": "1.2.246.562.20.00000000000000081115",
+        "name": "Viestintätieteet, yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000081106": {
+        "id": "1.2.246.562.20.00000000000000081106",
+        "name": "Yhteiskuntatieteet, yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Lappeenrannan-Lahden teknillinen yliopisto LUT",
+        "faculty": "LUT-yliopisto",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000074179": {
+        "id": "1.2.246.562.20.00000000000000074179",
+        "name": "Informaatiotutkimus, Historia-, kulttuuri- ja viestintätieteiden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000072838": {
+        "id": "1.2.246.562.20.00000000000000072838",
+        "name": "Informaatiotutkimus, Viestinnän monitieteinen koulutus, Luonnontieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000076475": {
+        "id": "1.2.246.562.20.00000000000000076475",
+        "name": "Journalistiikka, Viestinnän monitieteinen koulutus, Yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000072863": {
+        "id": "1.2.246.562.20.00000000000000072863",
+        "name": "Mediatutkimus, Viestinnän monitieteinen koulutus, Yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000076527": {
+        "id": "1.2.246.562.20.00000000000000076527",
+        "name": "Viestintä, Viestinnän monitieteinen koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000076528": {
+        "id": "1.2.246.562.20.00000000000000076528",
+        "name": "Hallintotieteiden koulutus, Hallintotieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Johtamisen ja talouden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000073136": {
+        "id": "1.2.246.562.20.00000000000000073136",
+        "name": "Politiikan tutkimuksen koulutus, Yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Johtamisen ja talouden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000076545": {
+        "id": "1.2.246.562.20.00000000000000076545",
+        "name": "Sosiaalityön koulutus, Yhteiskuntatieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000075661": {
+        "id": "1.2.246.562.20.00000000000000075661",
+        "name": "Oikeustiede, oikeusnotaari ja oikeustieteen maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Oikeustieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000075723": {
+        "id": "1.2.246.562.20.00000000000000075723",
+        "name": "Poliittinen historia ja valtio-oppi, valtiotieteiden kandidaatti ja valtiotieteiden maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Yhteiskuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000075725": {
+        "id": "1.2.246.562.20.00000000000000075725",
+        "name": "Sosiaalitieteet, valtiotieteiden kandidaatti ja valtiotieteiden maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Yhteiskuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000075726": {
+        "id": "1.2.246.562.20.00000000000000075726",
+        "name": "Sosiaalityö, valtiotieteiden kandidaatti ja valtiotieteiden maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Yhteiskuntatieteellinen tiedekunta",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000082087": {
+        "id": "1.2.246.562.20.00000000000000082087",
+        "name": "Hallintotieteet, Hallintotieteiden kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Vaasan yliopisto",
+        "faculty": "Johtamisen yksikkö",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000082157": {
+        "id": "1.2.246.562.20.00000000000000082157",
+        "name": "Viestintätieteet, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Vaasan yliopisto",
+        "faculty": "Markkinoinnin ja viestinnän yksikkö",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000079774": {
+        "id": "1.2.246.562.20.00000000000000079774",
+        "name": "Utbildningsprogrammet i juridik, rättsnotarie och juris magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Talous- ja oikeustieteiden laitos",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000079715": {
+        "id": "1.2.246.562.20.00000000000000079715",
+        "name": "Utbildningsprogrammet i samhällsvetenskaper (Åbo), politices kandidat och politices magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Yhteiskuntatieteiden laitos",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000079713": {
+        "id": "1.2.246.562.20.00000000000000079713",
+        "name": "Utbildningsprogrammet i samhällsvetenskaper (Vasa), politices kandidat och politices magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Yhteiskuntatieteiden laitos",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000079716": {
+        "id": "1.2.246.562.20.00000000000000079716",
+        "name": "Utbildningsprogrammet i socialvetenskaper (Vasa), politices kandidat och politices magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Yhteiskuntatieteiden laitos",
+        "exam": "G"
+    },
+    "1.2.246.562.20.00000000000000077102": {
+        "id": "1.2.246.562.20.00000000000000077102",
+        "name": "Filosofian kandiohjelma (opetus suomeksi), humanististen tieteiden tai valtiotieteiden kandidaatti ja filosofian tai valtiotieteiden maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077104": {
+        "id": "1.2.246.562.20.00000000000000077104",
+        "name": "Historian kandiohjelma (opetus suomeksi), humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077103": {
+        "id": "1.2.246.562.20.00000000000000077103",
+        "name": "Kandidatprogrammet i filosofi (undervisning på svenska), kandidat i humanistiska vetenskaper och filosofie eller politices magister (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077106": {
+        "id": "1.2.246.562.20.00000000000000077106",
+        "name": "Kandidatprogrammet i historia (undervisning på svenska), kandidat i humanistiska vetenskaper och filosofie magister (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077120": {
+        "id": "1.2.246.562.20.00000000000000077120",
+        "name": "Kulttuurien tutkimuksen kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077121": {
+        "id": "1.2.246.562.20.00000000000000077121",
+        "name": "Taiteiden tutkimuksen kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077191": {
+        "id": "1.2.246.562.20.00000000000000077191",
+        "name": "Teologian ja uskonnontutkimuksen kandiohjelma, teologian kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Teologinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077312": {
+        "id": "1.2.246.562.20.00000000000000077312",
+        "name": "Kulttuurintutkimus, Joensuu, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077337": {
+        "id": "1.2.246.562.20.00000000000000077337",
+        "name": "Läntinen teologia, opetusala, Joensuu, teologian kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077346": {
+        "id": "1.2.246.562.20.00000000000000077346",
+        "name": "Läntinen teologia, teologi, Joensuu, teologian kandidaatti ja maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000080852": {
+        "id": "1.2.246.562.20.00000000000000080852",
+        "name": "Historia, Joensuu, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Yhteiskuntatieteiden ja kauppatieteiden tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000083559": {
+        "id": "1.2.246.562.20.00000000000000083559",
+        "name": "Historian kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000083591": {
+        "id": "1.2.246.562.20.00000000000000083591",
+        "name": "Kulttuurit ja yhteisöt muuttuvassa maailmassa -kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000083251": {
+        "id": "1.2.246.562.20.00000000000000083251",
+        "name": "Musiikkitieteen kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000083245": {
+        "id": "1.2.246.562.20.00000000000000083245",
+        "name": "Taidehistorian ja taidekasvatuksen kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000080880": {
+        "id": "1.2.246.562.20.00000000000000080880",
+        "name": "Historia ja tieteiden ja aatteiden historia, Historia-, kulttuuri- ja viestintätieteiden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000072731": {
+        "id": "1.2.246.562.20.00000000000000072731",
+        "name": "Kulttuuriantropologia ja arkeologia, Historia-, kulttuuri- ja viestintätieteiden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000072729": {
+        "id": "1.2.246.562.20.00000000000000072729",
+        "name": "Saamelainen kulttuuri, Historia-, kulttuuri- ja viestintätieteiden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000073141": {
+        "id": "1.2.246.562.20.00000000000000073141",
+        "name": "Filosofian koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000076539": {
+        "id": "1.2.246.562.20.00000000000000076539",
+        "name": "Historian koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000075619": {
+        "id": "1.2.246.562.20.00000000000000075619",
+        "name": "Historian ja arkeologian tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000075625": {
+        "id": "1.2.246.562.20.00000000000000075625",
+        "name": "Kulttuurien tutkimuksen tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000075626": {
+        "id": "1.2.246.562.20.00000000000000075626",
+        "name": "Median, musiikin ja taiteen tutkimuksen tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000075631": {
+        "id": "1.2.246.562.20.00000000000000075631",
+        "name": "Digitaalisen kulttuurin, maiseman ja kulttuuriperinnön tutkinto-ohjelma, Pori, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000075719": {
+        "id": "1.2.246.562.20.00000000000000075719",
+        "name": "Filosofia, valtiotieteiden kandidaatti ja valtiotieteiden maisteri (3 v +2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Yhteiskuntatieteellinen tiedekunta",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000079510": {
+        "id": "1.2.246.562.20.00000000000000079510",
+        "name": "Utbildningsprogrammet i kultur, historia och filosofi, kandidat i humanistiska vetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000079775": {
+        "id": "1.2.246.562.20.00000000000000079775",
+        "name": "Utbildningsprogrammet i teologi, teologie kandidat och magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "H"
+    },
+    "1.2.246.562.20.00000000000000077107": {
+        "id": "1.2.246.562.20.00000000000000077107",
+        "name": "Englanti, kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077108": {
+        "id": "1.2.246.562.20.00000000000000077108",
+        "name": "Espanja, kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077109": {
+        "id": "1.2.246.562.20.00000000000000077109",
+        "name": "Italia, kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077110": {
+        "id": "1.2.246.562.20.00000000000000077110",
+        "name": "Maailman kielet ja kielitieteet, kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077116": {
+        "id": "1.2.246.562.20.00000000000000077116",
+        "name": "Nordiska språk (svenska som modersmål) och nordisk litteratur, kandidatprogrammet i finskugriska och nordiska språk och litteraturer, kandidat i humanistiska vetenskaper och filosofie magister (3 år + 2 år)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077117": {
+        "id": "1.2.246.562.20.00000000000000077117",
+        "name": "Pohjoismaiset kielet (ruotsi toisena kotimaisena kielenä), kotimaisten kielten ja kirjallisuuksien kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077111": {
+        "id": "1.2.246.562.20.00000000000000077111",
+        "name": "Ranska, kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077112": {
+        "id": "1.2.246.562.20.00000000000000077112",
+        "name": "Saksa (aiempaa saksan taitoa edellytetään), kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077113": {
+        "id": "1.2.246.562.20.00000000000000077113",
+        "name": "Saksa (aiempaa saksan taitoa ei edellytetä), kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077119": {
+        "id": "1.2.246.562.20.00000000000000077119",
+        "name": "Suomen kieli ja kulttuuri (hakijan ensikieli muu kuin suomi), kotimaisten kielten ja kirjallisuuksien kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077118": {
+        "id": "1.2.246.562.20.00000000000000077118",
+        "name": "Suomen kieli ja suomalais-ugrilaiset kielet ja kulttuurit sekä kotimainen kirjallisuus, kotimaisten kielten ja kirjallisuuksien kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077114": {
+        "id": "1.2.246.562.20.00000000000000077114",
+        "name": "Venäjä vieraana kielenä, kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077115": {
+        "id": "1.2.246.562.20.00000000000000077115",
+        "name": "Venäjä äidinkielenä, kielten kandiohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Helsingin yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077295": {
+        "id": "1.2.246.562.20.00000000000000077295",
+        "name": "Englannin kieli, kulttuuri ja kääntäminen, Joensuu, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077472": {
+        "id": "1.2.246.562.20.00000000000000077472",
+        "name": "Ruotsin kieli, Joensuu, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077473": {
+        "id": "1.2.246.562.20.00000000000000077473",
+        "name": "Suomen kieli ja kirjallisuus, Joensuu, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000077480": {
+        "id": "1.2.246.562.20.00000000000000077480",
+        "name": "Venäjän kieli, Joensuu, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Itä-Suomen yliopisto",
+        "faculty": "Filosofinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000082907": {
+        "id": "1.2.246.562.20.00000000000000082907",
+        "name": "Kieliasiantuntijan kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000083490": {
+        "id": "1.2.246.562.20.00000000000000083490",
+        "name": "Kielitietoisuuteen ja monikielisyyteen erikoistuva kielten aineenopettaja- ja luokanopettajakoulutus, kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000083223": {
+        "id": "1.2.246.562.20.00000000000000083223",
+        "name": "Kielten aineenopettajan kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000083445": {
+        "id": "1.2.246.562.20.00000000000000083445",
+        "name": "Kirjallisuuden kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000083260": {
+        "id": "1.2.246.562.20.00000000000000083260",
+        "name": "Ranska (aiempaa ranskan kielen taitoa ei vaadita), kieliasiantuntijan kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v) ",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000083311": {
+        "id": "1.2.246.562.20.00000000000000083311",
+        "name": "Saksa (aiempaa saksan kielen taitoa ei vaadita), kieliasiantuntijan kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v) ",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000083321": {
+        "id": "1.2.246.562.20.00000000000000083321",
+        "name": "Suomen kielen ja kirjallisuuden aineenopettajan kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000083259": {
+        "id": "1.2.246.562.20.00000000000000083259",
+        "name": "Venäjä (aiempaa venäjän kielen taitoa ei vaadita), kieliasiantuntijan kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v) ",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000083347": {
+        "id": "1.2.246.562.20.00000000000000083347",
+        "name": "Viittomakielen asiantuntijan kandidaatti- ja maisteriohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Jyväskylän yliopisto",
+        "faculty": "Humanistis-yhteiskuntatieteellinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000072733": {
+        "id": "1.2.246.562.20.00000000000000072733",
+        "name": "Englannin kieli, Kielten ja kirjallisuuden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075677": {
+        "id": "1.2.246.562.20.00000000000000075677",
+        "name": "Inarinsaame, Kielten ja kirjallisuuden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v) ",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075678": {
+        "id": "1.2.246.562.20.00000000000000075678",
+        "name": "Koltansaame, Kielten ja kirjallisuuden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075679": {
+        "id": "1.2.246.562.20.00000000000000075679",
+        "name": "Pohjoissaame, Kielten ja kirjallisuuden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v) ",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000072734": {
+        "id": "1.2.246.562.20.00000000000000072734",
+        "name": "Ruotsin kieli, Kielten ja kirjallisuuden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000078301": {
+        "id": "1.2.246.562.20.00000000000000078301",
+        "name": "Saksan kieli ja kulttuuri, Kielten ja kirjallisuuden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000072736": {
+        "id": "1.2.246.562.20.00000000000000072736",
+        "name": "Suomen kieli ja kirjallisuudentutkimus, Kielten ja kirjallisuuden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Oulun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000072837": {
+        "id": "1.2.246.562.20.00000000000000072837",
+        "name": "Englanti, Kielten koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000072877": {
+        "id": "1.2.246.562.20.00000000000000072877",
+        "name": "Pohjoismaiset kielet, Kielten koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000072886": {
+        "id": "1.2.246.562.20.00000000000000072886",
+        "name": "Saksa, Kielten koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000072988": {
+        "id": "1.2.246.562.20.00000000000000072988",
+        "name": "Suomen kieli, Kielten koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000073124": {
+        "id": "1.2.246.562.20.00000000000000073124",
+        "name": "Venäjä, Kielten koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Informaatioteknologian ja viestinnän tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000076541": {
+        "id": "1.2.246.562.20.00000000000000076541",
+        "name": "Kirjallisuustieteen koulutus, Humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Tampereen yliopisto",
+        "faculty": "Yhteiskuntatieteiden tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075617": {
+        "id": "1.2.246.562.20.00000000000000075617",
+        "name": "Englannin kieli, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075618": {
+        "id": "1.2.246.562.20.00000000000000075618",
+        "name": "Espanja, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075620": {
+        "id": "1.2.246.562.20.00000000000000075620",
+        "name": "Italia, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075621": {
+        "id": "1.2.246.562.20.00000000000000075621",
+        "name": "Kiinan kieli, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000076040": {
+        "id": "1.2.246.562.20.00000000000000076040",
+        "name": "Kirjallisuustieteiden tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075624": {
+        "id": "1.2.246.562.20.00000000000000075624",
+        "name": "Klassilliset kielet ja antiikin kulttuuri, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075627": {
+        "id": "1.2.246.562.20.00000000000000075627",
+        "name": "Pohjoismaiset kielet, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075628": {
+        "id": "1.2.246.562.20.00000000000000075628",
+        "name": "Ranska, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000082764": {
+        "id": "1.2.246.562.20.00000000000000082764",
+        "name": "Saksan kieli, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000075630": {
+        "id": "1.2.246.562.20.00000000000000075630",
+        "name": "Suomen kieli ja suomalais-ugrilainen kielentutkimus, kielten tutkinto-ohjelma, humanististen tieteiden kandidaatti ja filosofian maisteri (3 v + 2 v)",
+        "university": "Turun yliopisto",
+        "faculty": "Humanistinen tiedekunta",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000079474": {
+        "id": "1.2.246.562.20.00000000000000079474",
+        "name": "Engelska språket och litteraturen, utbildningsprogrammet i språk, kandidat i humanistiska vetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000079501": {
+        "id": "1.2.246.562.20.00000000000000079501",
+        "name": "Finska språket, utbildningsprogrammet i språk, kandidat i humanistiska vetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000079503": {
+        "id": "1.2.246.562.20.00000000000000079503",
+        "name": "Franska språket och litteraturen, utbildningsprogrammet i språk, kandidat i humanistiska vetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000079505": {
+        "id": "1.2.246.562.20.00000000000000079505",
+        "name": "Ryska språket och litteraturen, utbildningsprogrammet i språk, kandidat i humanistiska vetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000079506": {
+        "id": "1.2.246.562.20.00000000000000079506",
+        "name": "Svenska språket, utbildningsprogrammet i språk, kandidat i humanistiska vetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "I"
+    },
+    "1.2.246.562.20.00000000000000079508": {
+        "id": "1.2.246.562.20.00000000000000079508",
+        "name": "Tyska språket och litteraturen, utbildningsprogrammet i språk, kandidat i humanistiska vetenskaper och filosofie magister (3+2 år)",
+        "university": "Åbo Akademi",
+        "faculty": "Humanististen tieteiden laitos",
+        "exam": "I"
+    }
+}
