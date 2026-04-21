@@ -201,7 +201,7 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
 
         return fig
     
-with ui.nav_panel("Hakutoiveet"):
+with ui.nav_panel("Hakukohteet"):
     @render.ui
     def university_selector():
         choices = get_selectize_choices_uni()
@@ -242,7 +242,7 @@ with ui.nav_panel("Hakutoiveet"):
 
         study_programme_name = study_programme_data[study_programme]['name'] if study_programme in study_programme_data else "tuntematon"
 
-        return f"{count} participants in study programme {study_programme_name}"
+        return f"{count} hakijaa hakukohteeseen {study_programme_name}"
     
     @render_plotly
     def co_occurrence_treemap():
@@ -263,5 +263,5 @@ with ui.nav_panel("Hakutoiveet"):
         fig = px.treemap(df, 
                          path=['label'], 
                          values='count',
-                         title=f"Co-occurring study programmes")
+                         title=f"Hakukohteen {study_programme_data[study_programme]['name']} ristihakukohteet")
         return fig
