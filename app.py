@@ -259,9 +259,10 @@ with ui.nav_panel("Hakukohteet"):
             university = study_programme_data[sp]['university'] if sp in study_programme_data else "tuntematon"
             data.append({'study_programme': sp_name, 'university': university, 'label': f"{sp_name} ({university})", 'count': count})
 
+        sp_name = study_programme_data.get(study_programme, {}).get("name", "tuntematon")
         df = pd.DataFrame(data)
         fig = px.treemap(df, 
                          path=['label'], 
                          values='count',
-                         title=f"Hakukohteen {study_programme_data[study_programme]['name']} ristihakukohteet")
+                         title=f"Hakukohteen {sp_name} ristihakukohteet")
         return fig
