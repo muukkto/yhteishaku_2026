@@ -7,26 +7,71 @@ import plotly.express as px
 from shinywidgets import render_plotly
 
 exams = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+exams_colors = {
+    'A': '#1f77b4',
+    'B': '#ff7f0e',
+    'C': '#2ca02c',
+    'D': '#d62728',
+    'E': '#9467bd',
+    'F': '#8c564b',
+    'G': '#e377c2',
+    'H': '#7f7f7f',
+    'I': '#bcbd22'
+}
 
-@reactive.file_reader(filepath = "./analysis/study_programmes.json")
-def study_programme_read(filepath = "./analysis/study_programmes.json"):
-    return pd.read_json(filepath, orient='index', encoding='utf-8')
+# --- File readers for pre-computed analysis results ---
 
-@reactive.file_reader(filepath = "./analysis/applications.json")
-def applications_read(filepath = "./analysis/applications.json"):
-    return pd.read_json(filepath, orient='index', encoding='utf-8')
+@reactive.file_reader("./analysis/study_programmes.json")
+def study_programme_read():
+    with open("./analysis/study_programmes.json", encoding='utf-8') as f:
+        return json.load(f)
+
+@reactive.file_reader("./analysis/exams_co_occurrence.json")
+def exams_co_occurrence_read():
+    with open("./analysis/exams_co_occurrence.json", encoding='utf-8') as f:
+        raw = json.load(f)
+    return {tuple(k.split("|")): v for k, v in raw.items()}
+
+@reactive.file_reader("./analysis/overall_exam_count_dist.json")
+def overall_exam_count_dist_read():
+    with open("./analysis/overall_exam_count_dist.json", encoding='utf-8') as f:
+        return {int(k): v for k, v in json.load(f).items()}
+
+@reactive.file_reader("./analysis/participant_exam_count_dist.json")
+def participant_exam_count_dist_read():
+    with open("./analysis/participant_exam_count_dist.json", encoding='utf-8') as f:
+        raw = json.load(f)
+    return {exam: {int(k): v for k, v in dist.items()} for exam, dist in raw.items()}
+
+@reactive.file_reader("./analysis/wish_distribution.json")
+def wish_distribution_read():
+    with open("./analysis/wish_distribution.json", encoding='utf-8') as f:
+        raw = json.load(f)
+    return {exam: {int(k): v for k, v in dist.items()} for exam, dist in raw.items()}
+
+@reactive.file_reader("./analysis/wish_count_distribution.json")
+def wish_count_distribution_read():
+    with open("./analysis/wish_count_distribution.json", encoding='utf-8') as f:
+        raw = json.load(f)
+    return {category: {int(k): v for k, v in dist.items()} for category, dist in raw.items()}
+
+@reactive.file_reader("./analysis/study_programme_co_occurrence.json")
+def study_programme_co_occurrence_read():
+    with open("./analysis/study_programme_co_occurrence.json", encoding='utf-8') as f:
+        raw = json.load(f)
+    return {tuple(k.split("|")): v for k, v in raw.items()}
+
+@reactive.file_reader("./analysis/sp_exam_count_dist.json")
+def sp_exam_count_dist_read():
+    with open("./analysis/sp_exam_count_dist.json", encoding='utf-8') as f:
+        raw = json.load(f)
+    return {sp: {int(k): v for k, v in dist.items()} for sp, dist in raw.items()}
+
+# --- Lightweight reactive calcs (filtering only) ---
 
 @reactive.calc
 def study_programme_dataset() -> dict:
-    data = study_programme_read()
-    json_data = data.to_json(orient='index')
-    return json.loads(json_data)
-
-@reactive.calc   
-def applications_dataset() -> dict:
-    data = applications_read()
-    json_data = data.to_json(orient='index')
-    return json.loads(json_data)
+    return study_programme_read()
 
 @reactive.calc
 def selected_exam():
@@ -34,209 +79,48 @@ def selected_exam():
 
 @reactive.calc
 def exams_co_occurrence():
-    study_programme_data = study_programme_dataset()
-    application_data = applications_dataset()
-
-    co_occurrence = {}
-
-    for application in application_data.values():
-        exams = set()
-        for i in range(1, 7):
-            study_programme = application["study_programmes"][str(i)]
-            if study_programme is not None and study_programme in study_programme_data:
-                exams.add(study_programme_data[study_programme]['exam'])
-        
-        for exam1 in exams:
-            for exam2 in exams:
-                if exam1 != exam2:
-                    co_occurrence[(exam1, exam2)] = co_occurrence.get((exam1, exam2), 0) + 1
-
-    return co_occurrence
-
-@reactive.calc
-def exams_by_participant():
-    study_programme_data = study_programme_dataset()
-    application_data = applications_dataset()
-    exams = {}
-
-    for application in application_data.values():
-        participant_exams = set()
-        for i in range(1, 7):
-            study_programme = application["study_programmes"][str(i)]
-            if study_programme is not None and study_programme in study_programme_data:
-                participant_exams.add(study_programme_data[study_programme]['exam'])
-
-        exams[application["id"]] = participant_exams
-
-    return exams
-
-@reactive.calc
-def participant_exam_count_distribution():
-    exams_by_participant_data = exams_by_participant()
-    distribution = {exam: {} for exam in exams}
-
-    for exam in exams:
-        for participant_exams in exams_by_participant_data.values():
-            if exam in participant_exams:
-                exam_count = len(participant_exams)
-                distribution[exam][exam_count] = distribution[exam].get(exam_count, 0) + 1
-
-    return distribution
-
-@reactive.calc
-def participant_exam_study_programme_distribution():
-    exams_by_participant_data = exams_by_participant()
-    application_data = applications_dataset()
-    study_programme_data = study_programme_dataset()
-    distribution = {study_programme: {} for study_programme in study_programme_data}
-
-    for study_programme in study_programme_data:
-        for application in application_data.values():
-            for i in range(1, 7):
-                if application["study_programmes"][str(i)] == study_programme:
-                    participant_exams = exams_by_participant_data.get(application["id"], set())
-                    exam_count = len(participant_exams)
-                    distribution[study_programme][exam_count] = distribution[study_programme].get(exam_count, 0) + 1
-                    break
-
-    return distribution
+    return exams_co_occurrence_read()
 
 @reactive.calc
 def exam_co_occurrence_distribution():
-    co_occurrence = exams_co_occurrence()
+    co_occurrence = exams_co_occurrence_read()
     exam = selected_exam()
+    return {e2: count for (e1, e2), count in co_occurrence.items() if e1 == exam}
 
-    distribution = {}
+@reactive.calc
+def participant_exam_count_distribution():
+    return participant_exam_count_dist_read()
 
-    for (exam1, exam2), count in co_occurrence.items():
-        if exam1 == exam:
-            distribution[exam2] = distribution.get(exam2, 0) + count
-
-    return distribution
+@reactive.calc
+def participant_exam_study_programme_distribution():
+    return sp_exam_count_dist_read()
 
 @reactive.calc
 def wish_distribution():
-    study_programme_data = study_programme_dataset()
-    application_data = applications_dataset()
-    exam = selected_exam()
-
-    distribution = {}
-    
-    for application in application_data.values():
-        for i in range(1, 7):
-            study_programme = application["study_programmes"][str(i)]
-            if study_programme is not None and study_programme in study_programme_data:
-                if study_programme_data[study_programme]['exam'] == exam:
-                    distribution[i] = distribution.get(i, 0) + 1
-                    break
-
-    return distribution
+    return wish_distribution_read().get(selected_exam(), {})
 
 @reactive.calc
 def wish_count_distribution():
-    study_programme_data = study_programme_dataset()
-    application_data = applications_dataset()
-
-    distribution = {"known": {}, "unknown": {}, "all": {}}
-
-    j = 0
-
-    for application in application_data.values():
-        wish_count_known_study_programme = 0
-        wish_count_unknown_study_programme = 0
-
-        for i in range(1, 7):
-            study_programme = application["study_programmes"][str(i)]
-            if study_programme is not None:
-                if study_programme in study_programme_data:
-                    wish_count_known_study_programme += 1
-                else:
-                    wish_count_unknown_study_programme += 1
-
-        wish_count_all_study_programme = wish_count_known_study_programme + wish_count_unknown_study_programme
-
-        if wish_count_known_study_programme == 0:
-            print(f"Application {j} has no known study programmes.")
-            print(application)
-
-        j += 1
-
-        distribution["known"][wish_count_known_study_programme] = distribution["known"].get(wish_count_known_study_programme, 0) + 1
-        distribution["unknown"][wish_count_unknown_study_programme] = distribution["unknown"].get(wish_count_unknown_study_programme, 0) + 1
-        distribution["all"][wish_count_all_study_programme] = distribution["all"].get(wish_count_all_study_programme, 0) + 1
-
-    return distribution
+    return wish_count_distribution_read()
 
 @reactive.calc
 def selected_study_programme():
     return input.study_programme()
 
 @reactive.calc
-def study_programme_co_occurrence():
-    study_programme_data = study_programme_dataset()
-    application_data = applications_dataset()
-    co_occurrence = {}
-    for application in application_data.values():
-        study_programmes = set()
-        for i in range(1, 7):
-            sp = application["study_programmes"][str(i)]
-            if sp is not None and sp in study_programme_data:
-                study_programmes.add(sp)
-
-        for sp1 in study_programmes:
-            for sp2 in study_programmes:
-                if sp1 != sp2:
-                    co_occurrence[(sp1, sp2)] = co_occurrence.get((sp1, sp2), 0) + 1
-
-    return co_occurrence
-
-@reactive.calc
 def study_programme_co_occurrence_distribution():
-    co_occurrence = study_programme_co_occurrence()
+    co_occurrence = study_programme_co_occurrence_read()
     study_programme = selected_study_programme()
-
-    distribution = {}
-    for (sp1, sp2), count in co_occurrence.items():
-        if sp1 == study_programme:
-            distribution[sp2] = distribution.get(sp2, 0) + count
-
-    return distribution
-
-#@render.plot
-#def co_occurrence_heatmap():
-    co_occurrence = exams_co_occurrence()
-    exams = sorted(set(exam for exam_pair in co_occurrence.keys() for exam in exam_pair))
-    exam_index = {exam: idx for idx, exam in enumerate(exams)}
-
-    matrix = [[0] * len(exams) for _ in range(len(exams))]
-
-    for (exam1, exam2), count in co_occurrence.items():
-        i, j = exam_index[exam1], exam_index[exam2]
-        matrix[i][j] = count
-        matrix[j][i] = count
-
-    fig, ax = plt.subplots()
-    cax = ax.matshow(matrix, cmap='Blues')
-    fig.colorbar(cax)
-
-    ax.set_xticks(range(len(exams)))
-    ax.set_yticks(range(len(exams)))
-    ax.set_xticklabels(exams, rotation=90)
-    ax.set_yticklabels(exams)
-
-    ax.set_title("Valintakokeiden yhteishakujen lämpökartta")
-
-    return fig
+    return {sp2: count for (sp1, sp2), count in co_occurrence.items() if sp1 == study_programme}
 
 @reactive.calc
 def get_selectize_choices_uni():
     study_programme_data = study_programme_dataset()
     universities = set(sp['university'] for sp in study_programme_data.values())
-    choices = {uni: uni for uni in universities}
-    return choices
+    return {uni: uni for uni in universities}
 
 with ui.nav_panel("Yleiskatsaus"):
-    @render.plot
+    @render_plotly
     def co_occurrence_heatmap():
         co_occurrence = exams_co_occurrence()
         exams = sorted(set(exam for exam_pair in co_occurrence.keys() for exam in exam_pair))
@@ -249,45 +133,45 @@ with ui.nav_panel("Yleiskatsaus"):
             matrix[i][j] = count
             matrix[j][i] = count
 
-        fig, ax = plt.subplots()
 
-        cax = ax.matshow(matrix, cmap='Blues')
-        fig.colorbar(cax)
-
-        ax.set_xticks(range(len(exams)))
-        ax.set_yticks(range(len(exams)))
-        ax.set_xticklabels(exams, rotation=90)
-        ax.set_yticklabels(exams)
-
-        ax.set_title("Valintakokeiden yhteishakujen lämpökartta")
+        fig = px.imshow(
+            matrix,
+            x=exams,
+            y=exams,
+            color_continuous_scale='Blues',
+            title="Valintakokeiden yhteishakujen lämpökartta"
+        )
 
         return fig
     
-    @render.plot
+    @render_plotly
     def participant_exam_count_histogram_overview():
-        exams_by_participant_data = exams_by_participant()
-        distribution = {}
-
-        for participant_exams in exams_by_participant_data.values():
-            exam_count = len(participant_exams)
-            distribution[exam_count] = distribution.get(exam_count, 0) + 1
+        distribution = overall_exam_count_dist_read()
 
         keys = sorted(distribution.keys())
         values = [distribution[k] for k in keys]
 
-        fig, ax = plt.subplots()
-        ax_container = ax.bar(keys, values)
-        ax.bar_label(ax_container, label_type='center')
+        fig = px.bar(
+            x=keys,
+            y=values,
+            title="Hakijoiden valintakokeiden määrä",
+            text_auto=True,
+            labels={
+                'x': 'Valintakokeiden määrä',
+                'y': 'Hakijoita'
+            }
+        )
 
-        ax.set_xlabel("Valintakokeiden määrä")
-        ax.set_ylabel("Hakijoita")
-        ax.set_title("Hakijoiden valintakokeiden määrä")
+        fig.update_layout(
+            xaxis=dict(tickformat="d"),
+            yaxis=dict(tickformat="d")
+        )
 
         return fig
     
     ui.input_switch("exam_switch", "Tarkastele vain yliopistojen valintakokeita käyttäviä hakutoiveita", False) 
 
-    @render.plot
+    @render_plotly
     def wish_histogram_overview():
         distribution = wish_count_distribution()
 
@@ -300,13 +184,21 @@ with ui.nav_panel("Yleiskatsaus"):
             values = [distribution["all"][k] for k in keys]
             title = 'Hakutoiveden määrä (kaikki hakukohteet)'
 
-        fig, ax = plt.subplots()
-        ax_container = ax.bar(keys, values)
+        fig = px.bar(
+            x=keys,
+            y=values,
+            title=title,
+            text_auto=True,
+            labels={
+                'x': 'Hakutoiveiden määrä',
+                'y': 'Hakijoita'
+            }
+        )
 
-        ax.set_xlabel("Hakutoiveiden määrä")
-        ax.set_ylabel("Hakijoita")
-        ax.set_title(title)
-        ax.bar_label(ax_container, label_type='center')
+        fig.update_layout(
+            xaxis=dict(tickformat="d"),
+            yaxis=dict(tickformat="d")
+        )
 
         return fig
         
@@ -329,24 +221,32 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
         }
     )
 
-    @render.plot
+    @render_plotly
     def exam_co_occurrence_histogram():
         distribution = exam_co_occurrence_distribution()
 
         keys = sorted(distribution.keys())
         values = [distribution[k] for k in keys]
 
-        fig, ax = plt.subplots()
-        ax_container = ax.bar(keys, values)
-        ax.bar_label(ax_container, label_type='center')
+        fig = px.bar(
+            x=keys,
+            y=values,
+            title=f"Valintakokeen {selected_exam()} hakijoiden muut valintakokeet",
+            text_auto=True,
+            labels={
+                'x': 'Valintakoe',
+                'y': 'Hakijoita'
+            }
+        )
 
-        ax.set_xlabel("Valintakoe")
-        ax.set_ylabel("Hakijoita")
-        ax.set_title(f"Valintakokeen {selected_exam()} hakijoiden muut valintakokeet")
+        fig.update_layout(
+            xaxis=dict(tickformat="d"),
+            yaxis=dict(tickformat="d")
+        )
 
         return fig
     
-    @render.plot
+    @render_plotly
     def participant_exam_count_histogram():
         distribution = participant_exam_count_distribution()
         exam = selected_exam()
@@ -354,29 +254,46 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
         keys = sorted(distribution[exam].keys())
         values = [distribution[exam][k] for k in keys]
 
-        fig, ax = plt.subplots()
-        ax_container = ax.bar(keys, values)
-        ax.bar_label(ax_container, label_type='center')
+        fig = px.bar(
+            x=keys,
+            y=values,
+            title=f"Valintakokeen {exam} hakijoiden valintakokeiden määrä",
+            text_auto=True,
+            labels={
+                'x': 'Valintakokeiden määrä',
+                'y': 'Hakijoita'
+            }
+        )
 
-        ax.set_xlabel("Valintakokeiden määrä")
-        ax.set_ylabel("Hakijoita")
-        ax.set_title(f"Valintakokeen {exam} hakijoiden valintakokeiden määrä")
+        fig.update_layout(
+            xaxis=dict(tickformat="d"),
+            yaxis=dict(tickformat="d")
+        )
 
         return fig
     
-    @render.plot
+    @render_plotly
     def wish_histogram():
         distribution = wish_distribution()
 
         keys = sorted(distribution.keys())
         values = [distribution[k] for k in keys]
 
-        fig, ax = plt.subplots()
-        ax.bar(keys, values)
+        fig = px.bar(
+            x=keys,
+            y=values,
+            title=f"Millä prioriteetilla ensimmäinen valintakokeeseen {selected_exam()} liittyvä hakukohde on",
+            text_auto=True,
+            labels={
+                'x': 'Prioriteetti',
+                'y': 'Hakijoita'
+            }
+        )
 
-        ax.set_xlabel("Hakutoive")
-        ax.set_ylabel("Hakijoita")
-        ax.set_title(f"Hakutoiveiden jakauma valintakokeessa {selected_exam()}")
+        fig.update_layout(
+            xaxis=dict(tickformat="d"),
+            yaxis=dict(tickformat="d")
+        )
 
         return fig
     
@@ -409,16 +326,10 @@ with ui.nav_panel("Hakukohteet"):
     @render.text
     def participants_study_programme():
         study_programme_data = study_programme_dataset()
-        application_data = applications_dataset()
+        sp_exam_count = sp_exam_count_dist_read()
         study_programme = selected_study_programme()
 
-        count = 0
-        for application in application_data.values():
-            for i in range(1, 7):
-                if application["study_programmes"][str(i)] == study_programme:
-                    count += 1
-                    break
-
+        count = sum(sp_exam_count.get(study_programme, {}).values())
         study_programme_name = study_programme_data[study_programme]['name'] if study_programme in study_programme_data else "tuntematon"
 
         return f"{count} hakijaa hakukohteeseen {study_programme_name}"
@@ -429,24 +340,38 @@ with ui.nav_panel("Hakukohteet"):
         study_programme_data = study_programme_dataset()
         study_programme = selected_study_programme()
 
+        if not distribution:
+            return px.treemap(title="Ladataan dataa...")
+
         top_filter = 20
         filtered_distribution = dict(sorted(distribution.items(), key=lambda item: item[1], reverse=True)[:top_filter])
+
+        selected_study_programme_data = study_programme_data.get(study_programme, {})
 
         data = []
         for sp, count in filtered_distribution.items():
             sp_name = study_programme_data[sp]['name'] if sp in study_programme_data else "tuntematon"
             university = study_programme_data[sp]['university'] if sp in study_programme_data else "tuntematon"
-            data.append({'study_programme': sp_name, 'university': university, 'label': f"{sp_name} ({university})", 'count': count})
+            exam_color = exams_colors.get(study_programme_data[sp]['exam'], '#333333') if sp in study_programme_data else '#333333'
+            data.append({'study_programme': sp_name, 'university': university, 'label': f"{sp_name} ({university})", 'count': count, 'color': exam_color})
 
-        sp_name = study_programme_data.get(study_programme, {}).get("name", "tuntematon")
+        sp_name = selected_study_programme_data.get('name', 'tuntematon')
+        
+        
         df = pd.DataFrame(data)
-        fig = px.treemap(df, 
-                         path=['label'], 
-                         values='count',
-                         title=f"Hakukohteen {sp_name} ristihakukohteet")
+
+        fig = px.treemap(df,
+                values='count',
+                parents=[""] * len(df),
+                ids='label',
+                names='study_programme',
+                color='color',
+                title=f"Hakukohteen {sp_name} ristihakukohteet"
+        )
+
         return fig
 
-    @render.plot
+    @render_plotly
     def participant_exam_count_histogram_study_programme():
         distribution = participant_exam_study_programme_distribution()
         study_programme = selected_study_programme()
@@ -454,13 +379,20 @@ with ui.nav_panel("Hakukohteet"):
         keys = sorted(distribution[study_programme].keys())
         values = [distribution[study_programme][k] for k in keys]
 
-        fig, ax = plt.subplots()
-        ax_container = ax.bar(keys, values)
-        ax.bar_label(ax_container, label_type='center')
+        fig = px.bar(
+            x=keys,
+            y=values,
+            title=f"Hakukohteen {study_programme_dataset().get(study_programme, {}).get('name', 'tuntematon')}\nhakijoiden valintakokeiden määrä",
+            text_auto=True,
+            labels={
+                'x': 'Valintakokeiden määrä',
+                'y': 'Hakijoita'
+            }
+        )
 
-        ax.set_xlabel("Valintakokeiden määrä")
-        ax.set_ylabel("Hakijoita")
-        sp_name = study_programme_dataset().get(study_programme, {}).get("name", "tuntematon")
-        ax.set_title(f"Hakukohteen {sp_name}\nhakijoiden valintakokeiden määrä")
+        fig.update_layout(
+            xaxis=dict(tickformat="d"),
+            yaxis=dict(tickformat="d")
+        )
 
         return fig
