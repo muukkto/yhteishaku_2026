@@ -1,2 +1,3 @@
 data/
 preanalysis.py
+__pycache__/

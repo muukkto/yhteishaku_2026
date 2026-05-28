@@ -1,23 +1,13 @@
 from shiny import render, reactive
 from shiny.express import ui, input
 import json
-import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
 from shinywidgets import render_plotly
+import styles
 
 exams = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
-exams_colors = {
-    'A': '#1f77b4',
-    'B': '#ff7f0e',
-    'C': '#2ca02c',
-    'D': '#d62728',
-    'E': '#9467bd',
-    'F': '#8c564b',
-    'G': '#e377c2',
-    'H': '#7f7f7f',
-    'I': '#bcbd22'
-}
+exams_colors = styles.EXAM_COLORS
 
 # --- File readers for pre-computed analysis results ---
 
@@ -141,6 +131,12 @@ with ui.nav_panel("Yleiskatsaus"):
             color_continuous_scale='Blues',
             title="Valintakokeiden yhteishakujen lämpökartta"
         )
+        
+        fig.update_layout(
+            width=700,
+            height=700,
+            margin=dict(l=100, r=150, t=80, b=100)
+        )
 
         return fig
     
@@ -162,12 +158,7 @@ with ui.nav_panel("Yleiskatsaus"):
             }
         )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
-
-        return fig
+        return styles.apply_bar_style(fig)
     
     ui.input_switch("exam_switch", "Tarkastele vain yliopistojen valintakokeita käyttäviä hakutoiveita", False) 
 
@@ -195,12 +186,7 @@ with ui.nav_panel("Yleiskatsaus"):
             }
         )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
-
-        return fig
+        return styles.apply_bar_style(fig)
         
 
 
@@ -239,12 +225,7 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
             }
         )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
-
-        return fig
+        return styles.apply_bar_style(fig)
     
     @render_plotly
     def participant_exam_count_histogram():
@@ -265,12 +246,7 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
             }
         )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
-
-        return fig
+        return styles.apply_bar_style(fig)
     
     @render_plotly
     def wish_histogram():
@@ -290,12 +266,7 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
             }
         )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
-
-        return fig
+        return styles.apply_bar_style(fig)
     
 with ui.nav_panel("Hakukohteet"):
     @render.ui
@@ -390,9 +361,4 @@ with ui.nav_panel("Hakukohteet"):
             }
         )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
-
-        return fig
+        return styles.apply_bar_style(fig)
