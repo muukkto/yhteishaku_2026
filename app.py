@@ -353,7 +353,6 @@ with ui.nav_panel("Hakukohteet"):
                 parents=[""] * len(df),
                 ids='label',
                 names='study_programme',
-                color='color',
                 title=f"Hakukohteen {sp_name} ristihakukohteet"
         )
 
