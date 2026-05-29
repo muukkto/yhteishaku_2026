@@ -61,5 +61,6 @@ def apply_bar_style(fig):
         textposition="outside",
         textfont=dict(size=15, family="Arial Bold, sans-serif"),
         marker=dict(line=dict(width=0)),
+        selector=dict(type="bar"),
     )
     return fig
