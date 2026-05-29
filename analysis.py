@@ -88,7 +88,6 @@ for application in applications.values():
         sp = application["study_programmes"][str(i)]
         if sp and sp in study_programmes:
             sp_exam_count_dist[sp][count] = sp_exam_count_dist[sp].get(count, 0) + 1
-            break
 
 # --- Save results ---
 

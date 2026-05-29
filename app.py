@@ -1,7 +1,6 @@
 from shiny import render, reactive
 from shiny.express import ui, input
 import json
-import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
 from shinywidgets import render_plotly
@@ -140,6 +139,12 @@ with ui.nav_panel("Yleiskatsaus"):
             y=exams,
             color_continuous_scale='Blues',
             title="Valintakokeiden yhteishakujen lämpökartta"
+        )
+
+        fig.update_layout(
+            width=700,
+            height=700,
+            margin=dict(l=100, r=150, t=80, b=100)
         )
 
         return fig
