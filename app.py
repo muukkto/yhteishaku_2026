@@ -6,8 +6,36 @@ import plotly.express as px
 from shinywidgets import render_plotly
 import styles
 
+EXAM_COLORS = {
+    'A': '#1f77b4',
+    'B': '#ff7f0e',
+    'C': '#2ca02c',
+    'D': '#d62728',
+    'E': '#9467bd',
+    'F': '#8c564b',
+    'G': '#e377c2',
+    'H': '#7f7f7f',
+    'I': '#bcbd22',
+}
+
+
+def apply_bar_style(fig):
+    fig.update_layout(
+        xaxis=dict(tickformat="d"),
+        yaxis=dict(tickformat="d"),
+        font=dict(family="Arial, sans-serif", size=13, color="#333333"),
+        paper_bgcolor="white",
+        plot_bgcolor="white",
+        title=dict(font=dict(size=16), x=0.5, xanchor="center"),
+    )
+    fig.update_traces(
+        textposition="outside",
+        textfont=dict(size=15, family="Arial Bold, sans-serif"),
+        marker=dict(line=dict(width=0)),
+    )
+    return fig
+
 exams = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
-exams_colors = styles.EXAM_COLORS
 
 # --- File readers for pre-computed analysis results ---
 
