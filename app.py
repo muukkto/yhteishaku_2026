@@ -269,16 +269,7 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
         return styles.apply_bar_style(fig)
     
 with ui.nav_panel("Hakukohteet"):
-    @render.ui
-    def university_selector():
-        choices = get_selectize_choices_uni()
-
-        return ui.input_selectize(  
-            "university",  
-            "Valitse yliopisto:",  
-            choices
-        )
-    
+    ui.input_selectize("university", "Valitse yliopisto:", choices={})
     ui.input_selectize("study_programme", "Valitse hakukohde:", choices={})
 
     @reactive.effect
@@ -293,6 +284,12 @@ with ui.nav_panel("Hakukohteet"):
 
         choices = {sp['id']: sp['name'] for sp in filtered.values()}
         ui.update_selectize("study_programme", choices=choices)
+
+    @reactive.effect
+    def update_universities():
+        choices = get_selectize_choices_uni()
+        ui.update_selectize("university", choices=choices)
+
 
     @render.text
     def participants_study_programme():
