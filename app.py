@@ -7,7 +7,6 @@ import traceback
 import pandas as pd
 import plotly.express as px
 from shinywidgets import render_plotly
-import styles
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -26,8 +25,36 @@ def _log_unhandled(exc_type, exc_value, exc_tb):
 
 sys.excepthook = _log_unhandled
 
+EXAM_COLORS = {
+    'A': '#1f77b4',
+    'B': '#ff7f0e',
+    'C': '#2ca02c',
+    'D': '#d62728',
+    'E': '#9467bd',
+    'F': '#8c564b',
+    'G': '#e377c2',
+    'H': '#7f7f7f',
+    'I': '#bcbd22',
+}
+
+
+def apply_bar_style(fig):
+    fig.update_layout(
+        xaxis=dict(tickformat="d"),
+        yaxis=dict(tickformat="d"),
+        font=dict(family="Arial, sans-serif", size=13, color="#333333"),
+        paper_bgcolor="white",
+        plot_bgcolor="white",
+        title=dict(font=dict(size=16), x=0.5, xanchor="center"),
+    )
+    fig.update_traces(
+        textposition="outside",
+        textfont=dict(size=15, family="Arial Bold, sans-serif"),
+        marker=dict(line=dict(width=0)),
+    )
+    return fig
+
 exams = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
-exams_colors = styles.EXAM_COLORS
 
 # --- File readers for pre-computed analysis results ---
 
@@ -178,7 +205,7 @@ with ui.nav_panel("Yleiskatsaus"):
             }
         )
 
-        return styles.apply_bar_style(fig)
+        return apply_bar_style(fig)
     
     ui.input_switch("exam_switch", "Tarkastele vain yliopistojen valintakokeita käyttäviä hakutoiveita", False) 
 
@@ -206,7 +233,7 @@ with ui.nav_panel("Yleiskatsaus"):
             }
         )
 
-        return styles.apply_bar_style(fig)
+        return apply_bar_style(fig)
         
 
 
@@ -245,7 +272,7 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
             }
         )
 
-        return styles.apply_bar_style(fig)
+        return apply_bar_style(fig)
     
     @render_plotly
     def participant_exam_count_histogram():
@@ -266,7 +293,7 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
             }
         )
 
-        return styles.apply_bar_style(fig)
+        return apply_bar_style(fig)
     
     @render_plotly
     def wish_histogram():
@@ -286,7 +313,7 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
             }
         )
 
-        return styles.apply_bar_style(fig)
+        return apply_bar_style(fig)
     
 @reactive.effect
 def update_study_programmes():
@@ -340,7 +367,7 @@ with ui.nav_panel("Hakukohteet"):
         for sp, count in filtered_distribution.items():
             sp_name = study_programme_data[sp]['name'] if sp in study_programme_data else "tuntematon"
             university = study_programme_data[sp]['university'] if sp in study_programme_data else "tuntematon"
-            exam_color = exams_colors.get(study_programme_data[sp]['exam'], '#333333') if sp in study_programme_data else '#333333'
+            exam_color = EXAM_COLORS.get(study_programme_data[sp]['exam'], '#333333') if sp in study_programme_data else '#333333'
             data.append({'study_programme': sp_name, 'university': university, 'label': f"{sp_name} ({university})", 'count': count, 'color': exam_color})
 
         sp_name = selected_study_programme_data.get('name', 'tuntematon')
@@ -377,4 +404,4 @@ with ui.nav_panel("Hakukohteet"):
             }
         )
 
-        return styles.apply_bar_style(fig)
+        return apply_bar_style(fig)
