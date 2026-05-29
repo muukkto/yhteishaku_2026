@@ -268,27 +268,27 @@ with ui.nav_panel("Koekohtainen tarkastelu"):
 
         return styles.apply_bar_style(fig)
     
+@reactive.effect
+def update_study_programmes():
+    study_programme_data = study_programme_dataset()
+    university = input.university()
+
+    if university:
+        filtered = {k: v for k, v in study_programme_data.items() if v['university'] == university}
+    else:
+        filtered = study_programme_data
+
+    choices = {sp['id']: sp['name'] for sp in filtered.values()}
+    ui.update_selectize("study_programme", choices=choices)
+
+@reactive.effect
+def update_universities():
+    choices = get_selectize_choices_uni()
+    ui.update_selectize("university", choices=choices)
+
 with ui.nav_panel("Hakukohteet"):
     ui.input_selectize("university", "Valitse yliopisto:", choices={})
     ui.input_selectize("study_programme", "Valitse hakukohde:", choices={})
-
-    @reactive.effect
-    def update_study_programmes():
-        study_programme_data = study_programme_dataset()
-        university = input.university()
-
-        if university:
-            filtered = {k: v for k, v in study_programme_data.items() if v['university'] == university}
-        else:
-            filtered = study_programme_data
-
-        choices = {sp['id']: sp['name'] for sp in filtered.values()}
-        ui.update_selectize("study_programme", choices=choices)
-
-    @reactive.effect
-    def update_universities():
-        choices = get_selectize_choices_uni()
-        ui.update_selectize("university", choices=choices)
 
 
     @render.text
