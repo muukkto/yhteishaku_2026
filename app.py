@@ -347,7 +347,7 @@ with ui.navset_tab():
             for sp, count in filtered_distribution.items():
                 sp_name = study_programme_data[sp]['name'] if sp in study_programme_data else "tuntematon"
                 university = study_programme_data[sp]['university'] if sp in study_programme_data else "tuntematon"
-                exam_color = exams_colors.get(study_programme_data[sp]['exam'], '#333333') if sp in study_programme_data else '#333333'
+                exam_color = EXAM_COLORS.get(study_programme_data[sp]['exam'], '#333333') if sp in study_programme_data else '#333333'
                 data.append({'study_programme': sp_name, 'university': university, 'label': f"{sp_name} ({university})", 'count': count, 'color': exam_color})
 
             sp_name = selected_study_programme_data.get('name', 'tuntematon')
