@@ -118,7 +118,8 @@ def get_selectize_choices_uni():
     universities = set(sp['university'] for sp in study_programme_data.values())
     return {uni: uni for uni in universities}
 
-with ui.nav_panel("Yleiskatsaus"):
+with ui.navset_tab():
+  with ui.nav_panel("Yleiskatsaus"):
     @render_plotly
     def co_occurrence_heatmap():
         co_occurrence = exams_co_occurrence()
@@ -209,195 +210,195 @@ with ui.nav_panel("Yleiskatsaus"):
         
 
 
-with ui.nav_panel("Koekohtainen tarkastelu"):
-    ui.input_select(  
-        "exam",  
-        "Valitse valintakoe:",  
-        {
-            "A": "Valintakoe A",
-            "B": "Valintakoe B",
-            "C": "Valintakoe C",
-            "D": "Valintakoe D",
-            "E": "Valintakoe E",
-            "F": "Valintakoe F",
-            "G": "Valintakoe G",
-            "H": "Valintakoe H",
-            "I": "Valintakoe I"
-        }
-    )
+  with ui.nav_panel("Koekohtainen tarkastelu"):
+      ui.input_select(  
+          "exam",  
+          "Valitse valintakoe:",  
+          {
+              "A": "Valintakoe A",
+              "B": "Valintakoe B",
+              "C": "Valintakoe C",
+              "D": "Valintakoe D",
+              "E": "Valintakoe E",
+              "F": "Valintakoe F",
+              "G": "Valintakoe G",
+              "H": "Valintakoe H",
+              "I": "Valintakoe I"
+          }
+      )
 
-    @render_plotly
-    def exam_co_occurrence_histogram():
-        distribution = exam_co_occurrence_distribution()
+      @render_plotly
+      def exam_co_occurrence_histogram():
+          distribution = exam_co_occurrence_distribution()
 
-        keys = sorted(distribution.keys())
-        values = [distribution[k] for k in keys]
+          keys = sorted(distribution.keys())
+          values = [distribution[k] for k in keys]
 
-        fig = px.bar(
-            x=keys,
-            y=values,
-            title=f"Valintakokeen {selected_exam()} hakijoiden muut valintakokeet",
-            text_auto=True,
-            labels={
-                'x': 'Valintakoe',
-                'y': 'Hakijoita'
-            }
-        )
+          fig = px.bar(
+              x=keys,
+              y=values,
+              title=f"Valintakokeen {selected_exam()} hakijoiden muut valintakokeet",
+              text_auto=True,
+              labels={
+                  'x': 'Valintakoe',
+                  'y': 'Hakijoita'
+              }
+          )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
+          fig.update_layout(
+              xaxis=dict(tickformat="d"),
+              yaxis=dict(tickformat="d")
+          )
 
-        return fig
-    
-    @render_plotly
-    def participant_exam_count_histogram():
-        distribution = participant_exam_count_distribution()
-        exam = selected_exam()
+          return fig
+      
+      @render_plotly
+      def participant_exam_count_histogram():
+          distribution = participant_exam_count_distribution()
+          exam = selected_exam()
 
-        keys = sorted(distribution[exam].keys())
-        values = [distribution[exam][k] for k in keys]
+          keys = sorted(distribution[exam].keys())
+          values = [distribution[exam][k] for k in keys]
 
-        fig = px.bar(
-            x=keys,
-            y=values,
-            title=f"Valintakokeen {exam} hakijoiden valintakokeiden määrä",
-            text_auto=True,
-            labels={
-                'x': 'Valintakokeiden määrä',
-                'y': 'Hakijoita'
-            }
-        )
+          fig = px.bar(
+              x=keys,
+              y=values,
+              title=f"Valintakokeen {exam} hakijoiden valintakokeiden määrä",
+              text_auto=True,
+              labels={
+                  'x': 'Valintakokeiden määrä',
+                  'y': 'Hakijoita'
+              }
+          )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
+          fig.update_layout(
+              xaxis=dict(tickformat="d"),
+              yaxis=dict(tickformat="d")
+          )
 
-        return fig
-    
-    @render_plotly
-    def wish_histogram():
-        distribution = wish_distribution()
+          return fig
+      
+      @render_plotly
+      def wish_histogram():
+          distribution = wish_distribution()
 
-        keys = sorted(distribution.keys())
-        values = [distribution[k] for k in keys]
+          keys = sorted(distribution.keys())
+          values = [distribution[k] for k in keys]
 
-        fig = px.bar(
-            x=keys,
-            y=values,
-            title=f"Millä prioriteetilla ensimmäinen valintakokeeseen {selected_exam()} liittyvä hakukohde on",
-            text_auto=True,
-            labels={
-                'x': 'Prioriteetti',
-                'y': 'Hakijoita'
-            }
-        )
+          fig = px.bar(
+              x=keys,
+              y=values,
+              title=f"Millä prioriteetilla ensimmäinen valintakokeeseen {selected_exam()} liittyvä hakukohde on",
+              text_auto=True,
+              labels={
+                  'x': 'Prioriteetti',
+                  'y': 'Hakijoita'
+              }
+          )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
+          fig.update_layout(
+              xaxis=dict(tickformat="d"),
+              yaxis=dict(tickformat="d")
+          )
 
-        return fig
-    
-with ui.nav_panel("Hakukohteet"):
-    @render.ui
-    def university_selector():
-        choices = get_selectize_choices_uni()
+          return fig
+      
+  with ui.nav_panel("Hakukohteet"):
+      @render.ui
+      def university_selector():
+          choices = get_selectize_choices_uni()
 
-        return ui.input_selectize(  
-            "university",  
-            "Valitse yliopisto:",  
-            choices
-        )
-    
-    ui.input_selectize("study_programme", "Valitse hakukohde:", choices={})
+          return ui.input_selectize(  
+              "university",  
+              "Valitse yliopisto:",  
+              choices
+          )
+      
+      ui.input_selectize("study_programme", "Valitse hakukohde:", choices={})
 
-    @reactive.effect
-    def update_study_programmes():
-        study_programme_data = study_programme_dataset()
-        university = input.university()
+      @reactive.effect
+      def update_study_programmes():
+          study_programme_data = study_programme_dataset()
+          university = input.university()
 
-        if university:
-            filtered = {k: v for k, v in study_programme_data.items() if v['university'] == university}
-        else:
-            filtered = study_programme_data
+          if university:
+              filtered = {k: v for k, v in study_programme_data.items() if v['university'] == university}
+          else:
+              filtered = study_programme_data
 
-        choices = {sp['id']: sp['name'] for sp in filtered.values()}
-        ui.update_selectize("study_programme", choices=choices)
+          choices = {sp['id']: sp['name'] for sp in filtered.values()}
+          ui.update_selectize("study_programme", choices=choices)
 
-    @render.text
-    def participants_study_programme():
-        study_programme_data = study_programme_dataset()
-        sp_exam_count = sp_exam_count_dist_read()
-        study_programme = selected_study_programme()
+      @render.text
+      def participants_study_programme():
+          study_programme_data = study_programme_dataset()
+          sp_exam_count = sp_exam_count_dist_read()
+          study_programme = selected_study_programme()
 
-        count = sum(sp_exam_count.get(study_programme, {}).values())
-        study_programme_name = study_programme_data[study_programme]['name'] if study_programme in study_programme_data else "tuntematon"
+          count = sum(sp_exam_count.get(study_programme, {}).values())
+          study_programme_name = study_programme_data[study_programme]['name'] if study_programme in study_programme_data else "tuntematon"
 
-        return f"{count} hakijaa hakukohteeseen {study_programme_name}"
-    
-    @render_plotly
-    def co_occurrence_treemap():
-        distribution = study_programme_co_occurrence_distribution()
-        study_programme_data = study_programme_dataset()
-        study_programme = selected_study_programme()
+          return f"{count} hakijaa hakukohteeseen {study_programme_name}"
+      
+      @render_plotly
+      def co_occurrence_treemap():
+          distribution = study_programme_co_occurrence_distribution()
+          study_programme_data = study_programme_dataset()
+          study_programme = selected_study_programme()
 
-        if not distribution:
-            return px.treemap(title="Ladataan dataa...")
+          if not distribution:
+              return px.treemap(title="Ladataan dataa...")
 
-        top_filter = 20
-        filtered_distribution = dict(sorted(distribution.items(), key=lambda item: item[1], reverse=True)[:top_filter])
+          top_filter = 20
+          filtered_distribution = dict(sorted(distribution.items(), key=lambda item: item[1], reverse=True)[:top_filter])
 
-        selected_study_programme_data = study_programme_data.get(study_programme, {})
+          selected_study_programme_data = study_programme_data.get(study_programme, {})
 
-        data = []
-        for sp, count in filtered_distribution.items():
-            sp_name = study_programme_data[sp]['name'] if sp in study_programme_data else "tuntematon"
-            university = study_programme_data[sp]['university'] if sp in study_programme_data else "tuntematon"
-            exam_color = exams_colors.get(study_programme_data[sp]['exam'], '#333333') if sp in study_programme_data else '#333333'
-            data.append({'study_programme': sp_name, 'university': university, 'label': f"{sp_name} ({university})", 'count': count, 'color': exam_color})
+          data = []
+          for sp, count in filtered_distribution.items():
+              sp_name = study_programme_data[sp]['name'] if sp in study_programme_data else "tuntematon"
+              university = study_programme_data[sp]['university'] if sp in study_programme_data else "tuntematon"
+              exam_color = exams_colors.get(study_programme_data[sp]['exam'], '#333333') if sp in study_programme_data else '#333333'
+              data.append({'study_programme': sp_name, 'university': university, 'label': f"{sp_name} ({university})", 'count': count, 'color': exam_color})
 
-        sp_name = selected_study_programme_data.get('name', 'tuntematon')
-        
-        
-        df = pd.DataFrame(data)
+          sp_name = selected_study_programme_data.get('name', 'tuntematon')
+          
+          
+          df = pd.DataFrame(data)
 
-        fig = px.treemap(df,
-                values='count',
-                parents=[""] * len(df),
-                ids='label',
-                names='study_programme',
-                color='color',
-                title=f"Hakukohteen {sp_name} ristihakukohteet"
-        )
+          fig = px.treemap(df,
+                  values='count',
+                  parents=[""] * len(df),
+                  ids='label',
+                  names='study_programme',
+                  color='color',
+                  title=f"Hakukohteen {sp_name} ristihakukohteet"
+          )
 
-        return fig
+          return fig
 
-    @render_plotly
-    def participant_exam_count_histogram_study_programme():
-        distribution = participant_exam_study_programme_distribution()
-        study_programme = selected_study_programme()
+      @render_plotly
+      def participant_exam_count_histogram_study_programme():
+          distribution = participant_exam_study_programme_distribution()
+          study_programme = selected_study_programme()
 
-        keys = sorted(distribution[study_programme].keys())
-        values = [distribution[study_programme][k] for k in keys]
+          keys = sorted(distribution[study_programme].keys())
+          values = [distribution[study_programme][k] for k in keys]
 
-        fig = px.bar(
-            x=keys,
-            y=values,
-            title=f"Hakukohteen {study_programme_dataset().get(study_programme, {}).get('name', 'tuntematon')}\nhakijoiden valintakokeiden määrä",
-            text_auto=True,
-            labels={
-                'x': 'Valintakokeiden määrä',
-                'y': 'Hakijoita'
-            }
-        )
+          fig = px.bar(
+              x=keys,
+              y=values,
+              title=f"Hakukohteen {study_programme_dataset().get(study_programme, {}).get('name', 'tuntematon')}\nhakijoiden valintakokeiden määrä",
+              text_auto=True,
+              labels={
+                  'x': 'Valintakokeiden määrä',
+                  'y': 'Hakijoita'
+              }
+          )
 
-        fig.update_layout(
-            xaxis=dict(tickformat="d"),
-            yaxis=dict(tickformat="d")
-        )
+          fig.update_layout(
+              xaxis=dict(tickformat="d"),
+              yaxis=dict(tickformat="d")
+          )
 
-        return fig
+          return fig
