@@ -45,15 +45,8 @@ pio.templates["valintakoe"] = go.layout.Template(
     )
 )
 
-pio.templates["valintakoe"].data.bar = [
-    go.Bar(
-        textposition="outside",
-        textfont=dict(size=15, family="Arial Bold, sans-serif"),
-        marker=dict(
-            line=dict(width=0),
-        ),
-    )
-]
+# NOTE: Do NOT assign go.Bar() to template.data.bar — Plotly 6 tagify will break.
+# Bar styling is applied via apply_bar_style() instead.
 
 pio.templates.default = "plotly_white+valintakoe"
 
@@ -63,5 +56,11 @@ def apply_bar_style(fig):
     fig.update_layout(
         xaxis=dict(tickformat="d"),
         yaxis=dict(tickformat="d"),
+    )
+    fig.update_traces(
+        textposition="outside",
+        textfont=dict(size=15, family="Arial Bold, sans-serif"),
+        marker=dict(line=dict(width=0)),
+        selector=dict(type="bar"),
     )
     return fig
