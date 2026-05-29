@@ -1,10 +1,30 @@
 from shiny import render, reactive
 from shiny.express import ui, input
 import json
+import logging
+import sys
+import traceback
 import pandas as pd
 import plotly.express as px
 from shinywidgets import render_plotly
 import styles
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    stream=sys.stderr,
+)
+
+def _log_unhandled(exc_type, exc_value, exc_tb):
+    if issubclass(exc_type, KeyboardInterrupt):
+        sys.__excepthook__(exc_type, exc_value, exc_tb)
+        return
+    logging.critical(
+        "Unhandled exception:\n%s",
+        "".join(traceback.format_exception(exc_type, exc_value, exc_tb)),
+    )
+
+sys.excepthook = _log_unhandled
 
 exams = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
 exams_colors = styles.EXAM_COLORS
