@@ -193,12 +193,14 @@ with ui.navset_tab():
 
             keys = sorted(distribution.keys())
             values = [distribution[k] for k in keys]
+            total = sum(values)
+            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
 
             fig = px.bar(
                 x=keys,
                 y=values,
                 title="Hakijoiden valintakokeiden määrä",
-                text_auto=True,
+                text=text,
                 labels={
                     'x': 'Valintakokeiden määrä',
                     'y': 'Hakijoita'
@@ -222,11 +224,14 @@ with ui.navset_tab():
                 values = [distribution["all"][k] for k in keys]
                 title = 'Hakutoiveden määrä (kaikki hakukohteet)'
 
+            total = sum(values)
+            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
+
             fig = px.bar(
                 x=keys,
                 y=values,
                 title=title,
-                text_auto=True,
+                text=text,
                 labels={
                     'x': 'Hakutoiveiden määrä',
                     'y': 'Hakijoita'
@@ -258,12 +263,14 @@ with ui.navset_tab():
 
             keys = sorted(distribution.keys())
             values = [distribution[k] for k in keys]
+            total = sum(values)
+            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
 
             fig = px.bar(
                 x=keys,
                 y=values,
                 title=f"Valintakokeen {selected_exam()} hakijoiden muut valintakokeet",
-                text_auto=True,
+                text=text,
                 labels={
                     'x': 'Valintakoe',
                     'y': 'Hakijoita'
@@ -279,12 +286,14 @@ with ui.navset_tab():
 
             keys = sorted(distribution[exam].keys())
             values = [distribution[exam][k] for k in keys]
+            total = sum(values)
+            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
 
             fig = px.bar(
                 x=keys,
                 y=values,
                 title=f"Valintakokeen {exam} hakijoiden valintakokeiden määrä",
-                text_auto=True,
+                text=text,
                 labels={
                     'x': 'Valintakokeiden määrä',
                     'y': 'Hakijoita'
@@ -299,12 +308,14 @@ with ui.navset_tab():
 
             keys = sorted(distribution.keys())
             values = [distribution[k] for k in keys]
+            total = sum(values)
+            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
 
             fig = px.bar(
                 x=keys,
                 y=values,
                 title=f"Millä prioriteetilla ensimmäinen valintakokeeseen {selected_exam()} liittyvä hakukohde on",
-                text_auto=True,
+                text=text,
                 labels={
                     'x': 'Prioriteetti',
                     'y': 'Hakijoita'
@@ -373,12 +384,14 @@ with ui.navset_tab():
 
             keys = sorted(distribution[study_programme].keys())
             values = [distribution[study_programme][k] for k in keys]
+            total = sum(values)
+            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
 
             fig = px.bar(
                 x=keys,
                 y=values,
                 title=f"Hakukohteen {study_programme_dataset().get(study_programme, {}).get('name', 'tuntematon')}\nhakijoiden valintakokeiden määrä",
-                text_auto=True,
+                text=text,
                 labels={
                     'x': 'Valintakokeiden määrä',
                     'y': 'Hakijoita'
