@@ -1,401 +1,582 @@
 from shiny import render, reactive
 from shiny.express import ui, input
 import json
+import os
 import pandas as pd
 import plotly.express as px
 from shinywidgets import render_plotly
 import styles
 
-EXAM_COLORS = {
-    'A': '#1f77b4',
-    'B': '#ff7f0e',
-    'C': '#2ca02c',
-    'D': '#d62728',
-    'E': '#9467bd',
-    'F': '#8c564b',
-    'G': '#e377c2',
-    'H': '#7f7f7f',
-    'I': '#bcbd22',
-}
+YEARS = sorted([y for y in ["2025", "2026"] if os.path.isdir(f"./analysis/{y}")])
+YEAR_CHOICES = {y: y for y in YEARS}
+YEAR_COLORS = {"2025": "#636EFA", "2026": "#EF553B"}
+
+exams = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
 
 
-def apply_bar_style(fig):
-    fig.update_layout(
-        xaxis=dict(tickformat="d"),
-        yaxis=dict(tickformat="d"),
-        font=dict(family="Arial, sans-serif", size=13, color="#333333"),
-        paper_bgcolor="white",
-        plot_bgcolor="white",
-        title=dict(font=dict(size=16), x=0.5, xanchor="center"),
-    )
-    fig.update_traces(
-        textposition="outside",
-        textfont=dict(size=15, family="Arial Bold, sans-serif"),
-        marker=dict(line=dict(width=0)),
-    )
-    return fig
-
-exams = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
-
-# --- File readers for pre-computed analysis results ---
-
-@reactive.file_reader("./analysis/study_programmes.json")
-def study_programme_read():
-    with open("./analysis/study_programmes.json", encoding='utf-8') as f:
+def load_json(year, filename):
+    with open(f"./analysis/{year}/{filename}", encoding="utf-8") as f:
         return json.load(f)
 
-@reactive.file_reader("./analysis/exams_co_occurrence.json")
-def exams_co_occurrence_read():
-    with open("./analysis/exams_co_occurrence.json", encoding='utf-8') as f:
-        raw = json.load(f)
-    return {tuple(k.split("|")): v for k, v in raw.items()}
-
-@reactive.file_reader("./analysis/overall_exam_count_dist.json")
-def overall_exam_count_dist_read():
-    with open("./analysis/overall_exam_count_dist.json", encoding='utf-8') as f:
-        return {int(k): v for k, v in json.load(f).items()}
-
-@reactive.file_reader("./analysis/participant_exam_count_dist.json")
-def participant_exam_count_dist_read():
-    with open("./analysis/participant_exam_count_dist.json", encoding='utf-8') as f:
-        raw = json.load(f)
-    return {exam: {int(k): v for k, v in dist.items()} for exam, dist in raw.items()}
-
-@reactive.file_reader("./analysis/wish_distribution.json")
-def wish_distribution_read():
-    with open("./analysis/wish_distribution.json", encoding='utf-8') as f:
-        raw = json.load(f)
-    return {exam: {int(k): v for k, v in dist.items()} for exam, dist in raw.items()}
-
-@reactive.file_reader("./analysis/wish_count_distribution.json")
-def wish_count_distribution_read():
-    with open("./analysis/wish_count_distribution.json", encoding='utf-8') as f:
-        raw = json.load(f)
-    return {category: {int(k): v for k, v in dist.items()} for category, dist in raw.items()}
-
-@reactive.file_reader("./analysis/study_programme_co_occurrence.json")
-def study_programme_co_occurrence_read():
-    with open("./analysis/study_programme_co_occurrence.json", encoding='utf-8') as f:
-        raw = json.load(f)
-    return {tuple(k.split("|")): v for k, v in raw.items()}
-
-@reactive.file_reader("./analysis/sp_exam_count_dist.json")
-def sp_exam_count_dist_read():
-    with open("./analysis/sp_exam_count_dist.json", encoding='utf-8') as f:
-        raw = json.load(f)
-    return {sp: {int(k): v for k, v in dist.items()} for sp, dist in raw.items()}
-
-# --- Lightweight reactive calcs (filtering only) ---
-
-@reactive.calc
-def study_programme_dataset() -> dict:
-    return study_programme_read()
+# --- Reactive inputs ---
 
 @reactive.calc
 def selected_exam():
     return input.exam()
 
 @reactive.calc
-def exams_co_occurrence():
-    return exams_co_occurrence_read()
-
-@reactive.calc
-def exam_co_occurrence_distribution():
-    co_occurrence = exams_co_occurrence_read()
-    exam = selected_exam()
-    return {e2: count for (e1, e2), count in co_occurrence.items() if e1 == exam}
-
-@reactive.calc
-def participant_exam_count_distribution():
-    return participant_exam_count_dist_read()
-
-@reactive.calc
-def participant_exam_study_programme_distribution():
-    return sp_exam_count_dist_read()
-
-@reactive.calc
-def wish_distribution():
-    return wish_distribution_read().get(selected_exam(), {})
-
-@reactive.calc
-def wish_count_distribution():
-    return wish_count_distribution_read()
-
-@reactive.calc
 def selected_study_programme():
     return input.study_programme()
 
 @reactive.calc
-def study_programme_co_occurrence_distribution():
-    co_occurrence = study_programme_co_occurrence_read()
-    study_programme = selected_study_programme()
-    return {sp2: count for (sp1, sp2), count in co_occurrence.items() if sp1 == study_programme}
+def selected_year_heatmap():
+    return input.year_heatmap()
 
 @reactive.calc
-def get_selectize_choices_uni():
-    study_programme_data = study_programme_dataset()
-    universities = set(sp['university'] for sp in study_programme_data.values())
-    return {uni: uni for uni in universities}
+def selected_year_hakukohteet():
+    return input.year_hakukohteet()
 
-@reactive.effect
-def update_study_programmes():
-    study_programme_data = study_programme_dataset()
-    university = input.university()
 
-    if university:
-        filtered = {k: v for k, v in study_programme_data.items() if v['university'] == university}
-    else:
-        filtered = study_programme_data
+# --- Year-specific data (Hakukohteet + heatmap) ---
 
-    choices = {sp['id']: sp['name'] for sp in filtered.values()}
-    ui.update_selectize("study_programme", choices=choices)
+@reactive.calc
+def study_programme_data():
+    return load_json(selected_year_hakukohteet(), "study_programmes.json")
+
+@reactive.calc
+def exams_co_occurrence_for_heatmap():
+    raw = load_json(selected_year_heatmap(), "exams_co_occurrence.json")
+    return {tuple(k.split("|")): v for k, v in raw.items()}
+
+@reactive.calc
+def sp_co_occurrence_for_year():
+    raw = load_json(selected_year_hakukohteet(), "study_programme_co_occurrence.json")
+    return {tuple(k.split("|")): v for k, v in raw.items()}
+
+@reactive.calc
+def sp_exam_count_dist_for_year():
+    raw = load_json(selected_year_hakukohteet(), "sp_exam_count_dist.json")
+    return {sp: {int(k): v for k, v in dist.items()} for sp, dist in raw.items()}
+
+
+# --- Multi-year data (Yleiskatsaus + Koekohtainen bar charts) ---
+
+@reactive.calc
+def overall_exam_count_dist_all_years():
+    result = {}
+    for year in YEARS:
+        raw = load_json(year, "overall_exam_count_dist.json")
+        result[year] = {int(k): v for k, v in raw.items()}
+    return result
+
+@reactive.calc
+def wish_count_distribution_all_years():
+    result = {}
+    for year in YEARS:
+        raw = load_json(year, "wish_count_distribution.json")
+        result[year] = {cat: {int(k): v for k, v in dist.items()} for cat, dist in raw.items()}
+    return result
+
+@reactive.calc
+def exams_co_occurrence_for_exam_all_years():
+    exam = selected_exam()
+    result = {}
+    for year in YEARS:
+        raw = load_json(year, "exams_co_occurrence.json")
+        co = {tuple(k.split("|")): v for k, v in raw.items()}
+        result[year] = {e2: count for (e1, e2), count in co.items() if e1 == exam}
+    return result
+
+@reactive.calc
+def participant_exam_count_dist_all_years():
+    result = {}
+    for year in YEARS:
+        raw = load_json(year, "participant_exam_count_dist.json")
+        result[year] = {ex: {int(k): v for k, v in dist.items()} for ex, dist in raw.items()}
+    return result
+
+@reactive.calc
+def wish_distribution_all_years():
+    result = {}
+    for year in YEARS:
+        raw = load_json(year, "wish_distribution.json")
+        result[year] = {ex: {int(k): v for k, v in dist.items()} for ex, dist in raw.items()}
+    return result
+
+
+# --- Hakukohteet selectize updates ---
 
 @reactive.effect
 def update_universities():
-    choices = get_selectize_choices_uni()
-    ui.update_selectize("university", choices=choices)
+    sp_data = study_programme_data()
+    universities = sorted(set(sp["university"] for sp in sp_data.values()))
+    ui.update_selectize("university", choices={u: u for u in universities})
+
+@reactive.effect
+def update_study_programmes():
+    sp_data = study_programme_data()
+    university = input.university_hakukohteet()
+    filtered = {k: v for k, v in sp_data.items() if v["university"] == university} if university else sp_data
+    ui.update_selectize("study_programme", choices={sp["id"]: sp["name"] for sp in filtered.values()})
+
+@reactive.effect
+def update_study_fields():
+    sp_data = study_programme_data()
+    study_fields = sorted(set(sp.get("study_field", "Tuntematon") for sp in sp_data.values()))
+    ui.update_selectize("study_field", choices={sf: sf for sf in study_fields})
+
+# --- UI ---
 
 with ui.navset_tab():
+
+    # ── Yleiskatsaus ────────────────────────────────────────────────────────────
     with ui.nav_panel("Yleiskatsaus"):
+
+        ui.input_select("year_heatmap", "Valitse lämpökartan vuosi:", choices=YEAR_CHOICES)
+
         @render_plotly
         def co_occurrence_heatmap():
-            co_occurrence = exams_co_occurrence()
-            exams = sorted(set(exam for exam_pair in co_occurrence.keys() for exam in exam_pair))
-            exam_index = {exam: idx for idx, exam in enumerate(exams)}
-
-            matrix = [[0] * len(exams) for _ in range(len(exams))]
-
-            for (exam1, exam2), count in co_occurrence.items():
-                i, j = exam_index[exam1], exam_index[exam2]
-                matrix[i][j] = count
-                matrix[j][i] = count
-
-
+            co_occurrence = exams_co_occurrence_for_heatmap()
+            sorted_exams = sorted(set(e for pair in co_occurrence.keys() for e in pair))
+            idx = {e: i for i, e in enumerate(sorted_exams)}
+            matrix = [[0] * len(sorted_exams) for _ in range(len(sorted_exams))]
+            for (e1, e2), count in co_occurrence.items():
+                matrix[idx[e1]][idx[e2]] = count
+                matrix[idx[e2]][idx[e1]] = count
             fig = px.imshow(
                 matrix,
-                x=exams,
-                y=exams,
-                color_continuous_scale='Blues',
-                title="Valintakokeiden yhteishakujen lämpökartta"
+                x=sorted_exams,
+                y=sorted_exams,
+                color_continuous_scale="Blues",
+                title=f"Valintakokeiden yhteishakujen lämpökartta ({selected_year_heatmap()})",
             )
-
-            fig.update_layout(
-                width=700,
-                height=700,
-                margin=dict(l=100, r=150, t=80, b=100)
-            )
-
+            fig.update_layout(width=700, height=700, margin=dict(l=100, r=150, t=80, b=100))
             return fig
-    
+
         @render_plotly
         def participant_exam_count_histogram_overview():
-            distribution = overall_exam_count_dist_read()
-
-            keys = sorted(distribution.keys())
-            values = [distribution[k] for k in keys]
-            total = sum(values)
-            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
-
+            all_dists = overall_exam_count_dist_all_years()
+            rows = []
+            for year, dist in all_dists.items():
+                total = sum(dist.values())
+                for count, participants in dist.items():
+                    rows.append({
+                        "year": year,
+                        "count": count,
+                        "participants": participants,
+                        "text": f"{participants} ({participants/total*100:.1f}%)" if total > 0 else str(participants),
+                    })
+            df = pd.DataFrame(rows)
             fig = px.bar(
-                x=keys,
-                y=values,
+                df, x="count", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
                 title="Hakijoiden valintakokeiden määrä",
-                text=text,
-                labels={
-                    'x': 'Valintakokeiden määrä',
-                    'y': 'Hakijoita'
-                }
+                labels={"count": "Valintakokeiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
-
             return styles.apply_bar_style(fig)
-        
-        ui.input_switch("exam_switch", "Tarkastele vain yliopistojen valintakokeita käyttäviä hakutoiveita", False) 
+
+        ui.input_switch("exam_switch", "Tarkastele vain yliopistojen valintakokeita käyttäviä hakutoiveita", False)
 
         @render_plotly
         def wish_histogram_overview():
-            distribution = wish_count_distribution()
-
-            if input.exam_switch():
-                keys = sorted(distribution["known"].keys())
-                values = [distribution["known"][k] for k in keys]
-                title = 'Hakutoiveiden määrä (vain yliopistojen valintakokeita käyttävät hakukohteet)'
-            else:
-                keys = sorted(distribution["all"].keys())
-                values = [distribution["all"][k] for k in keys]
-                title = 'Hakutoiveden määrä (kaikki hakukohteet)'
-
-            total = sum(values)
-            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
-
-            fig = px.bar(
-                x=keys,
-                y=values,
-                title=title,
-                text=text,
-                labels={
-                    'x': 'Hakutoiveiden määrä',
-                    'y': 'Hakijoita'
-                }
+            all_dists = wish_count_distribution_all_years()
+            key = "known" if input.exam_switch() else "all"
+            title_suffix = (
+                "(vain yliopistojen valintakokeita käyttävät hakukohteet)"
+                if input.exam_switch()
+                else "(kaikki hakukohteet)"
             )
-
+            rows = []
+            for year, cats in all_dists.items():
+                dist = cats.get(key, {})
+                total = sum(dist.values())
+                for count, participants in dist.items():
+                    rows.append({
+                        "year": year,
+                        "count": count,
+                        "participants": participants,
+                        "text": f"{participants} ({participants/total*100:.1f}%)" if total > 0 else str(participants),
+                    })
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="count", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title=f"Hakutoiveiden määrä {title_suffix}",
+                labels={"count": "Hakutoiveiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
+            )
             return styles.apply_bar_style(fig)
 
+    # ── Koekohtainen tarkastelu ─────────────────────────────────────────────────
     with ui.nav_panel("Koekohtainen tarkastelu"):
-        ui.input_select(  
-            "exam",  
-            "Valitse valintakoe:",  
-            {
-                "A": "Valintakoe A",
-                "B": "Valintakoe B",
-                "C": "Valintakoe C",
-                "D": "Valintakoe D",
-                "E": "Valintakoe E",
-                "F": "Valintakoe F",
-                "G": "Valintakoe G",
-                "H": "Valintakoe H",
-                "I": "Valintakoe I"
-            }
-        )
+
+        ui.input_select("exam", "Valitse valintakoe:", {e: f"Valintakoe {e}" for e in exams})
 
         @render_plotly
         def exam_co_occurrence_histogram():
-            distribution = exam_co_occurrence_distribution()
-
-            keys = sorted(distribution.keys())
-            values = [distribution[k] for k in keys]
-            total = sum(values)
-            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
-
+            co_per_year = exams_co_occurrence_for_exam_all_years()
+            exam = selected_exam()
+            rows = []
+            for year, dist in co_per_year.items():
+                total = sum(dist.values())
+                for e2, count in dist.items():
+                    rows.append({
+                        "year": year,
+                        "exam": e2,
+                        "participants": count,
+                        "text": f"{count} ({count/total*100:.1f}%)" if total > 0 else str(count),
+                    })
+            df = pd.DataFrame(rows)
             fig = px.bar(
-                x=keys,
-                y=values,
-                title=f"Valintakokeen {selected_exam()} hakijoiden muut valintakokeet",
-                text=text,
-                labels={
-                    'x': 'Valintakoe',
-                    'y': 'Hakijoita'
-                }
+                df, x="exam", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                category_orders={"exam": sorted(df["exam"].unique())},
+                title=f"Valintakokeen {exam} hakijoiden muut valintakokeet",
+                labels={"exam": "Valintakoe", "participants": "Hakijoita", "year": "Vuosi"},
             )
-
             return styles.apply_bar_style(fig)
-    
+
         @render_plotly
         def participant_exam_count_histogram():
-            distribution = participant_exam_count_distribution()
+            all_dists = participant_exam_count_dist_all_years()
             exam = selected_exam()
-
-            keys = sorted(distribution[exam].keys())
-            values = [distribution[exam][k] for k in keys]
-            total = sum(values)
-            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
-
+            rows = []
+            for year, dists in all_dists.items():
+                dist = dists.get(exam, {})
+                total = sum(dist.values())
+                for count, participants in dist.items():
+                    rows.append({
+                        "year": year,
+                        "count": count,
+                        "participants": participants,
+                        "text": f"{participants} ({participants/total*100:.1f}%)" if total > 0 else str(participants),
+                    })
+            df = pd.DataFrame(rows)
             fig = px.bar(
-                x=keys,
-                y=values,
+                df, x="count", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
                 title=f"Valintakokeen {exam} hakijoiden valintakokeiden määrä",
-                text=text,
-                labels={
-                    'x': 'Valintakokeiden määrä',
-                    'y': 'Hakijoita'
-                }
+                labels={"count": "Valintakokeiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
-
             return styles.apply_bar_style(fig)
-    
+
         @render_plotly
         def wish_histogram():
-            distribution = wish_distribution()
-
-            keys = sorted(distribution.keys())
-            values = [distribution[k] for k in keys]
-            total = sum(values)
-            text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
-
+            all_dists = wish_distribution_all_years()
+            exam = selected_exam()
+            rows = []
+            for year, dists in all_dists.items():
+                dist = dists.get(exam, {})
+                total = sum(dist.values())
+                for priority, count in dist.items():
+                    rows.append({
+                        "year": year,
+                        "priority": priority,
+                        "participants": count,
+                        "text": f"{count} ({count/total*100:.1f}%)" if total > 0 else str(count),
+                    })
+            df = pd.DataFrame(rows)
             fig = px.bar(
-                x=keys,
-                y=values,
-                title=f"Millä prioriteetilla ensimmäinen valintakokeeseen {selected_exam()} liittyvä hakukohde on",
-                text=text,
-                labels={
-                    'x': 'Prioriteetti',
-                    'y': 'Hakijoita'
-                }
+                df, x="priority", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title=f"Millä prioriteetilla ensimmäinen valintakokeeseen {exam} liittyvä hakukohde on",
+                labels={"priority": "Prioriteetti", "participants": "Hakijoita", "year": "Vuosi"},
             )
-
             return styles.apply_bar_style(fig)
 
-    with ui.nav_panel("Hakukohteet"):
-        ui.input_selectize("university", "Valitse yliopisto:", choices={})
-        ui.input_selectize("study_programme", "Valitse hakukohde:", choices={})
+    # -- Yliopistokohtainen tarkastelu ───────────────────────────────────────────────
+    with ui.nav_panel("Yliopistot"):
+        @render_plotly
+        def university_participant_count_histogram():
+            rows = []
+            for year in YEARS:
+                sp_data = load_json(year, "study_programmes.json")
+                applications = load_json(year, "applications.json")
+                counts = {}
+                for application in applications.values():
+                    for university in set(
+                        sp_data[application["study_programmes"][str(i)]]["university"]
+                        for i in range(1, 7)
+                        if application["study_programmes"][str(i)] and application["study_programmes"][str(i)] in sp_data
+                    ):
+                        counts[university] = counts.get(university, 0) + 1
+                total = sum(counts.values())
+                for university, count in counts.items():
+                    rows.append({"year": year, "university": university, "count": count, "text": f"{count} ({count/total*100:.1f}%)" if total > 0 else str(count)})
 
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="university", y="count", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title="Hakijoiden määrä yliopistoittain",
+                labels={"university": "Yliopisto", "count": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+        ui.input_selectize("university", "Valitse yliopisto:", choices={})
+
+        @render_plotly
+        def university_exam_distribution():
+            university = input.university()
+            rows = []
+            for year in YEARS:
+                sp_data = load_json(year, "study_programmes.json")
+                applications = load_json(year, "applications.json")
+                counts = {}
+                for application in applications.values():
+                    for exam in set(
+                        sp_data[application["study_programmes"][str(i)]]["exam"]
+                        for i in range(1, 7)
+                        if application["study_programmes"][str(i)] and application["study_programmes"][str(i)] in sp_data
+                        and sp_data[application["study_programmes"][str(i)]]["university"] == university
+                    ):
+                        counts[exam] = counts.get(exam, 0) + 1
+                total = sum(counts.values())
+                for exam, count in counts.items():
+                    rows.append({"year": year, "exam": exam, "count": count, "text": f"{count} ({count/total*100:.1f}%)" if total > 0 else str(count)})
+
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="exam", y="count", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                category_orders={"exam": sorted(df["exam"].unique())},
+                title=f"Hakijoiden valintakokeiden jakauma {university}",
+                labels={"exam": "Valintakoe", "count": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+        @render_plotly
+        def university_wish_distribution():
+            university = input.university()
+            rows = []
+            for year in YEARS:
+                sp_data = load_json(year, "study_programmes.json")
+                applications = load_json(year, "applications.json")
+                counts = {}
+                for application in applications.values():
+                    for i in range(1, 7):
+                        sp_id = application["study_programmes"][str(i)]
+                        if sp_id and sp_id in sp_data and sp_data[sp_id]["university"] == university:
+                            counts[i] = counts.get(i, 0) + 1
+                            break  # vain ensimmäinen osuma per hakija
+                total = sum(counts.values())
+                for priority, count in counts.items():
+                    rows.append({"year": year, "priority": priority, "count": count, "text": f"{count} ({count/total*100:.1f}%)" if total > 0 else str(count)})
+
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="priority", y="count", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title=f"Millä prioriteetilla ensimmäinen {university} liittyvä hakukohde on",
+                labels={"priority": "Prioriteetti", "count": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+    # -- Koulutusalakohtainen tarkastelu ───────────────────────────────────────────────
+    with ui.nav_panel("Koulutusalat"):
+        ui.input_selectize("study_field", "Valitse koulutusala:", choices={})
+
+        @render_plotly
+        def study_field_exam_distribution():
+            study_field = input.study_field()
+            rows = []
+            for year in YEARS:
+                sp_data = load_json(year, "study_programmes.json")
+                applications = load_json(year, "applications.json")
+                counts = {}
+                for application in applications.values():
+                    # tarkista onko hakijalla hakukohde tällä koulutusalalla
+                    has_study_field = any(
+                        sp_data.get(application["study_programmes"][str(i)], {}).get("study_field") == study_field
+                        for i in range(1, 7)
+                        if application["study_programmes"][str(i)]
+                    )
+                    if not has_study_field:
+                        continue
+                    # laske kaikki hakijan uniikit valintakokeet (yksi per hakija per koe)
+                    for exam in set(
+                        sp_data[application["study_programmes"][str(i)]]["exam"]
+                        for i in range(1, 7)
+                        if application["study_programmes"][str(i)] and application["study_programmes"][str(i)] in sp_data
+                    ):
+                        counts[exam] = counts.get(exam, 0) + 1
+                total = sum(counts.values())
+                for exam, count in counts.items():
+                    rows.append({"year": year, "exam": exam, "count": count, "text": f"{count} ({count/total*100:.1f}%)" if total > 0 else str(count)})
+
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="exam", y="count", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                category_orders={"exam": sorted(df["exam"].unique())},
+                title=f"Valintakokeiden jakauma koulutusalan {study_field} hakijoilla",
+                labels={"exam": "Valintakoe", "count": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+        @render_plotly
+        def study_field_exam_count_distribution():
+            study_field = input.study_field()
+            rows = []
+            for year in YEARS:
+                sp_data = load_json(year, "study_programmes.json")
+                applications = load_json(year, "applications.json")
+                counts = {}
+                for application in applications.values():
+                    # tarkista onko hakijalla hakukohde tällä koulutusalalla
+                    has_study_field = any(
+                        sp_data.get(application["study_programmes"][str(i)], {}).get("study_field") == study_field
+                        for i in range(1, 7)
+                        if application["study_programmes"][str(i)]
+                    )
+                    if not has_study_field:
+                        continue
+                    # laske hakijan uniikkien valintakokeiden määrä
+                    unique_exams = set(
+                        sp_data[application["study_programmes"][str(i)]]["exam"]
+                        for i in range(1, 7)
+                        if application["study_programmes"][str(i)] and application["study_programmes"][str(i)] in sp_data
+                    )
+                    exam_count = len(unique_exams)
+                    counts[exam_count] = counts.get(exam_count, 0) + 1
+                total = sum(counts.values())
+                for count, participants in counts.items():
+                    rows.append({"year": year, "exam_count": count, "participants": participants, "text": f"{participants} ({participants/total*100:.1f}%)" if total > 0 else str(participants)})
+
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="exam_count", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title=f"Valintakokeiden määrä koulutusalan {study_field} hakijoilla",
+                labels={"exam_count": "Valintakokeiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+        ui.input_switch("exam_switch_study_field", "Tarkastele vain yliopistojen valintakokeita käyttäviä hakutoiveita", False)
+
+        @render_plotly
+        def study_field_wish_histogram_overview():
+            study_field = input.study_field()
+            rows = []
+            for year in YEARS:
+                sp_data = load_json(year, "study_programmes.json")
+                applications = load_json(year, "applications.json")
+                counts = {}
+                for application in applications.values():
+                    # tarkista onko hakijalla hakukohde tällä koulutusalalla
+                    has_study_field = any(
+                        sp_data.get(application["study_programmes"][str(i)], {}).get("study_field") == study_field
+                        for i in range(1, 7)
+                        if application["study_programmes"][str(i)]
+                    )
+                    if not has_study_field:
+                        continue
+                    # laske hakijan hakutoiveiden määrä (kaikki tai vain tunnetut kytkimen mukaan)
+                    if input.exam_switch_study_field():
+                        wish_count = sum(
+                            1 for i in range(1, 7)
+                            if application["study_programmes"][str(i)] and application["study_programmes"][str(i)] in sp_data
+                        )
+                    else:
+                        wish_count = sum(
+                            1 for i in range(1, 7)
+                            if application["study_programmes"][str(i)]
+                        )
+                    counts[wish_count] = counts.get(wish_count, 0) + 1
+                total = sum(counts.values())
+                for count, participants in counts.items():
+                    rows.append({"year": year, "wish_count": count, "participants": participants, "text": f"{participants} ({participants/total*100:.1f}%)" if total > 0 else str(participants)})
+
+            df = pd.DataFrame(rows)
+            title_suffix = "(vain yliopistojen valintakokeita käyttävät hakukohteet)" if input.exam_switch_study_field() else "(kaikki hakukohteet)"
+            fig = px.bar(
+                df, x="wish_count", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title=f"Hakutoiveiden määrä koulutusalan {study_field} hakijoilla {title_suffix}",
+                labels={"wish_count": "Hakutoiveiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+    # ── Hakukohteet ─────────────────────────────────────────────────────────────
+    with ui.nav_panel("Hakukohteet"):
+
+        ui.input_select("year_hakukohteet", "Valitse vuosi:", choices=YEAR_CHOICES)
+        ui.input_selectize("university_hakukohteet", "Valitse yliopisto:", choices={})
+        ui.input_selectize("study_programme", "Valitse hakukohde:", choices={})
 
         @render.text
         def participants_study_programme():
-            study_programme_data = study_programme_dataset()
-            sp_exam_count = sp_exam_count_dist_read()
+            sp_data = study_programme_data()
+            sp_exam_count = sp_exam_count_dist_for_year()
             study_programme = selected_study_programme()
-
             count = sum(sp_exam_count.get(study_programme, {}).values())
-            study_programme_name = study_programme_data[study_programme]['name'] if study_programme in study_programme_data else "tuntematon"
+            sp_name = sp_data[study_programme]["name"] if study_programme in sp_data else "tuntematon"
+            return f"{count} hakijaa hakukohteeseen {sp_name}"
 
-            return f"{count} hakijaa hakukohteeseen {study_programme_name}"
-        
         @render_plotly
         def co_occurrence_treemap():
-            distribution = study_programme_co_occurrence_distribution()
-            study_programme_data = study_programme_dataset()
+            sp_data = study_programme_data()
             study_programme = selected_study_programme()
+            distribution = {
+                sp2: count
+                for (sp1, sp2), count in sp_co_occurrence_for_year().items()
+                if sp1 == study_programme
+            }
 
             if not distribution:
                 return px.treemap(title="Ladataan dataa...")
 
             top_filter = 20
-            filtered_distribution = dict(sorted(distribution.items(), key=lambda item: item[1], reverse=True)[:top_filter])
-
-            selected_study_programme_data = study_programme_data.get(study_programme, {})
+            filtered = dict(sorted(distribution.items(), key=lambda item: item[1], reverse=True)[:top_filter])
+            sp_name = sp_data.get(study_programme, {}).get("name", "tuntematon")
 
             data = []
-            for sp, count in filtered_distribution.items():
-                sp_name = study_programme_data[sp]['name'] if sp in study_programme_data else "tuntematon"
-                university = study_programme_data[sp]['university'] if sp in study_programme_data else "tuntematon"
-                exam_color = EXAM_COLORS.get(study_programme_data[sp]['exam'], '#333333') if sp in study_programme_data else '#333333'
-                data.append({'study_programme': sp_name, 'university': university, 'label': f"{sp_name} ({university})", 'count': count, 'color': exam_color})
+            for sp, count in filtered.items():
+                name = sp_data[sp]["name"] if sp in sp_data else "tuntematon"
+                university = sp_data[sp]["university"] if sp in sp_data else "tuntematon"
+                color = styles.EXAM_COLORS.get(sp_data[sp]["exam"], "#333333") if sp in sp_data else "#333333"
+                data.append({"study_programme": name, "university": university, "label": f"{name} ({university})", "count": count, "color": color})
 
-            sp_name = selected_study_programme_data.get('name', 'tuntematon')
-            
-            
             df = pd.DataFrame(data)
-
-            fig = px.treemap(df,
-                    values='count',
-                    parents=[""] * len(df),
-                    ids='label',
-                    names='study_programme',
-                    color='color',
-                    title=f"Hakukohteen {sp_name} ristihakukohteet"
+            fig = px.treemap(
+                df,
+                values="count",
+                parents=[""] * len(df),
+                ids="label",
+                names="study_programme",
+                color="color",
+                title=f"Hakukohteen {sp_name} ristihakukohteet",
             )
-
             return fig
 
         @render_plotly
         def participant_exam_count_histogram_study_programme():
-            distribution = participant_exam_study_programme_distribution()
+            sp_data = study_programme_data()
+            distribution = sp_exam_count_dist_for_year()
             study_programme = selected_study_programme()
 
-            keys = sorted(distribution[study_programme].keys())
-            values = [distribution[study_programme][k] for k in keys]
+            dist = distribution.get(study_programme, {})
+            keys = sorted(dist.keys())
+            values = [dist[k] for k in keys]
             total = sum(values)
             text = [f"{v} ({v/total*100:.1f}%)" if total > 0 else str(v) for v in values]
 
+            sp_name = sp_data.get(study_programme, {}).get("name", "tuntematon")
             fig = px.bar(
                 x=keys,
                 y=values,
-                title=f"Hakukohteen {study_programme_dataset().get(study_programme, {}).get('name', 'tuntematon')}\nhakijoiden valintakokeiden määrä",
+                title=f"Hakukohteen {sp_name}\nhakijoiden valintakokeiden määrä",
                 text=text,
-                labels={
-                    'x': 'Valintakokeiden määrä',
-                    'y': 'Hakijoita'
-                }
+                labels={"x": "Valintakokeiden määrä", "y": "Hakijoita"},
             )
-
             return styles.apply_bar_style(fig)
