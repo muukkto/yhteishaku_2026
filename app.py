@@ -103,6 +103,30 @@ def wish_distribution_all_years():
         result[year] = {ex: {int(k): v for k, v in dist.items()} for ex, dist in raw.items()}
     return result
 
+@reactive.calc
+def participant_university_count_dist_all_years():
+    result = {}
+    for year in YEARS:
+        raw = load_json(year, "participant_university_count_dist.json")
+        result[year] = {ex: {int(k): v for k, v in dist.items()} for ex, dist in raw.items()}
+    return result
+
+@reactive.calc
+def participant_study_field_count_dist_all_years():
+    result = {}
+    for year in YEARS:
+        raw = load_json(year, "participant_study_field_count_dist.json")
+        result[year] = {ex: {int(k): v for k, v in dist.items()} for ex, dist in raw.items()}
+    return result
+
+@reactive.calc
+def participant_study_programme_count_dist_all_years():
+    result = {}
+    for year in YEARS:
+        raw = load_json(year, "participant_study_programme_count_dist.json")
+        result[year] = {ex: {int(k): v for k, v in dist.items()} for ex, dist in raw.items()}
+    return result
+
 
 # --- Hakukohteet selectize updates ---
 
@@ -260,6 +284,81 @@ with ui.navset_tab():
                 color_discrete_map=YEAR_COLORS,
                 title=f"Valintakokeen {exam} hakijoiden valintakokeiden määrä",
                 labels={"count": "Valintakokeiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+        @render_plotly
+        def participant_university_count_histogram():
+            all_dists = participant_university_count_dist_all_years()
+            exam = selected_exam()
+            rows = []
+            for year, dists in all_dists.items():
+                dist = dists.get(exam, {})
+                total = sum(dist.values())
+                for count, participants in dist.items():
+                    rows.append({
+                        "year": year,
+                        "count": count,
+                        "participants": participants,
+                        "text": f"{participants} ({participants/total*100:.1f}%)" if total > 0 else str(participants),
+                    })
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="count", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title=f"Hakijoiden hakemien yliopistojen määrä valintakokeella {exam}",
+                labels={"count": "Haettujen yliopistojen määrä", "participants": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+        @render_plotly
+        def participant_study_field_count_histogram():
+            all_dists = participant_study_field_count_dist_all_years()
+            exam = selected_exam()
+            rows = []
+            for year, dists in all_dists.items():
+                dist = dists.get(exam, {})
+                total = sum(dist.values())
+                for count, participants in dist.items():
+                    rows.append({
+                        "year": year,
+                        "count": count,
+                        "participants": participants,
+                        "text": f"{participants} ({participants/total*100:.1f}%)" if total > 0 else str(participants),
+                    })
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="count", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title=f"Hakijoiden hakemien koulutusalojen määrä valintakokeella {exam}",
+                labels={"count": "Haettujen koulutusalojen määrä", "participants": "Hakijoita", "year": "Vuosi"},
+            )
+            return styles.apply_bar_style(fig)
+
+        @render_plotly
+        def participant_study_programme_count_histogram():
+            all_dists = participant_study_programme_count_dist_all_years()
+            exam = selected_exam()
+            rows = []
+            for year, dists in all_dists.items():
+                dist = dists.get(exam, {})
+                total = sum(dist.values())
+                for count, participants in dist.items():
+                    rows.append({
+                        "year": year,
+                        "count": count,
+                        "participants": participants,
+                        "text": f"{participants} ({participants/total*100:.1f}%)" if total > 0 else str(participants),
+                    })
+            df = pd.DataFrame(rows)
+            fig = px.bar(
+                df, x="count", y="participants", color="year", barmode="group",
+                text="text",
+                color_discrete_map=YEAR_COLORS,
+                title=f"Hakijoiden hakemien koulutusohjelmien määrä valintakokeella {exam}",
+                labels={"count": "Haettujen koulutusohjelmien määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
             return styles.apply_bar_style(fig)
 

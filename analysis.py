@@ -96,6 +96,41 @@ for year in years:
             if sp and sp in study_programmes:
                 sp_exam_count_dist[sp][count] = sp_exam_count_dist[sp].get(count, 0) + 1
 
+    # 8. Participant university count distribution per exam (filtered to exam-related programmes)
+    participant_university_count_dist = {exam: {} for exam in exam_list}
+    for application in applications.values():
+        for exam in exams_by_participant[application["id"]]:
+            puniversities = set()
+            for i in range(1, 7):
+                sp = application["study_programmes"][str(i)]
+                if sp and sp in study_programmes and study_programmes[sp]['exam'] == exam:
+                    puniversities.add(study_programmes[sp]['university'])
+            ucount = len(puniversities)
+            participant_university_count_dist[exam][ucount] = participant_university_count_dist[exam].get(ucount, 0) + 1
+
+    # 9. Participant study field count distribution per exam (filtered to exam-related programmes)
+    participant_study_field_count_dist = {exam: {} for exam in exam_list}
+    for application in applications.values():
+        for exam in exams_by_participant[application["id"]]:
+            pstudy_fields = set()
+            for i in range(1, 7):
+                sp = application["study_programmes"][str(i)]
+                if sp and sp in study_programmes and study_programmes[sp]['exam'] == exam:
+                    pstudy_fields.add(study_programmes[sp].get('study_field', 'Tuntematon'))
+            sfcount = len(pstudy_fields)
+            participant_study_field_count_dist[exam][sfcount] = participant_study_field_count_dist[exam].get(sfcount, 0) + 1
+
+    # 10. Participant study programme count distribution per exam (filtered to exam-related programmes)
+    participant_study_programme_count_dist = {exam: {} for exam in exam_list}
+    for application in applications.values():
+        for exam in exams_by_participant[application["id"]]:
+            psp_count = sum(
+                1 for i in range(1, 7)
+                if application["study_programmes"][str(i)] and application["study_programmes"][str(i)] in study_programmes
+                and study_programmes[application["study_programmes"][str(i)]]['exam'] == exam
+            )
+            participant_study_programme_count_dist[exam][psp_count] = participant_study_programme_count_dist[exam].get(psp_count, 0) + 1
+
     # --- Save results ---
 
     with open(f"./analysis/{year}/exams_co_occurrence.json", "w", encoding='utf-8') as f:
@@ -118,5 +153,14 @@ for year in years:
 
     with open(f"./analysis/{year}/sp_exam_count_dist.json", "w", encoding='utf-8') as f:
         json.dump(sp_exam_count_dist, f, ensure_ascii=False)
+
+    with open(f"./analysis/{year}/participant_university_count_dist.json", "w", encoding='utf-8') as f:
+        json.dump(participant_university_count_dist, f, ensure_ascii=False)
+
+    with open(f"./analysis/{year}/participant_study_field_count_dist.json", "w", encoding='utf-8') as f:
+        json.dump(participant_study_field_count_dist, f, ensure_ascii=False)
+
+    with open(f"./analysis/{year}/participant_study_programme_count_dist.json", "w", encoding='utf-8') as f:
+        json.dump(participant_study_programme_count_dist, f, ensure_ascii=False)
 
     print(f"Pre-computed statistics saved to ./analysis/{year}/")
