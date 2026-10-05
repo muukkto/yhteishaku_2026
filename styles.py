@@ -8,7 +8,7 @@ import plotly.io as pio
 TEXT_COLOR = "#333333"
 UNKNOWN_COLOR = "#333333"
 
-YEAR_COLORS = {"2025": "#636EFA", "2026": "#EF553B"}
+YEAR_COLORS = {"2025": "#032B45", "2026": "#FCC700"}
 
 SEQUENTIAL_COLORSCALE = "Blues"
 
@@ -51,6 +51,7 @@ pio.templates["valintakoe"] = go.layout.Template(
             sequential=SEQUENTIAL_COLORSCALE,
         ),
         margin=dict(l=60, r=40, t=60, b=60),
+        separators=", ",
     )
 )
 
@@ -70,6 +71,8 @@ pio.templates.default = "plotly_white+valintakoe"
 TITLE_WRAP_WIDTH = 70
 TITLE_LINE_HEIGHT = 22
 BASE_TOP_MARGIN = 60
+
+SMALL_AXIS_MAX = 10
 
 HEATMAP_SIZE = 700
 HEATMAP_MARGIN = dict(l=100, r=150, t=80, b=100)
@@ -92,9 +95,13 @@ def wrap_title(fig):
 def apply_bar_style(fig):
     """Yhteinen tyyli kaikille bar charteille."""
     fig.update_layout(
-        xaxis=dict(tickformat="d"),
-        yaxis=dict(tickformat="d"),
+        xaxis=dict(tickformat=",d", dtick=1),
+        yaxis=dict(tickformat=",d"),
     )
+    # Pienillä arvoilla Plotly valitsisi jakoväliksi 0,5, jolloin kokonaislukumuoto toistaisi merkintöjä
+    y_max = max((max(trace.y) for trace in fig.data if trace.y is not None and len(trace.y) > 0), default=0)
+    if y_max < SMALL_AXIS_MAX:
+        fig.update_yaxes(dtick=1)
     return wrap_title(fig)
 
 
