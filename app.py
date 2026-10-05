@@ -9,7 +9,6 @@ import styles
 
 YEARS = sorted([y for y in ["2025", "2026"] if os.path.isdir(f"./analysis/{y}")])
 YEAR_CHOICES = {y: y for y in YEARS}
-YEAR_COLORS = {"2025": "#636EFA", "2026": "#EF553B"}
 
 exams = ["A", "B", "C", "D", "E", "F", "G", "H", "I"]
 
@@ -171,11 +170,10 @@ with ui.navset_tab():
                 matrix,
                 x=sorted_exams,
                 y=sorted_exams,
-                color_continuous_scale="Blues",
+                color_continuous_scale=styles.SEQUENTIAL_COLORSCALE,
                 title=f"Valintakokeiden yhteishakujen lämpökartta ({selected_year_heatmap()})",
             )
-            fig.update_layout(width=700, height=700, margin=dict(l=100, r=150, t=80, b=100))
-            return fig
+            return styles.apply_heatmap_style(fig)
 
         @render_plotly
         def participant_exam_count_histogram_overview():
@@ -194,7 +192,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="count", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title="Hakijoiden valintakokeiden määrä",
                 labels={"count": "Valintakokeiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -226,7 +224,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="count", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Hakutoiveiden määrä {title_suffix}",
                 labels={"count": "Hakutoiveiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -255,7 +253,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="exam", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 category_orders={"exam": sorted(df["exam"].unique())},
                 title=f"Valintakokeen {exam} hakijoiden muut valintakokeet",
                 labels={"exam": "Valintakoe", "participants": "Hakijoita", "year": "Vuosi"},
@@ -281,7 +279,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="count", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Valintakokeen {exam} hakijoiden valintakokeiden määrä",
                 labels={"count": "Valintakokeiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -306,7 +304,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="count", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Hakijoiden hakemien yliopistojen määrä valintakokeella {exam}",
                 labels={"count": "Haettujen yliopistojen määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -331,7 +329,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="count", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Hakijoiden hakemien koulutusalojen määrä valintakokeella {exam}",
                 labels={"count": "Haettujen koulutusalojen määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -356,7 +354,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="count", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Hakijoiden hakemien koulutusohjelmien määrä valintakokeella {exam}",
                 labels={"count": "Haettujen koulutusohjelmien määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -381,7 +379,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="priority", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Millä prioriteetilla ensimmäinen valintakokeeseen {exam} liittyvä hakukohde on",
                 labels={"priority": "Prioriteetti", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -411,7 +409,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="university", y="count", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title="Hakijoiden määrä yliopistoittain",
                 labels={"university": "Yliopisto", "count": "Hakijoita", "year": "Vuosi"},
             )
@@ -443,7 +441,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="exam", y="count", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 category_orders={"exam": sorted(df["exam"].unique())},
                 title=f"Hakijoiden valintakokeiden jakauma {university}",
                 labels={"exam": "Valintakoe", "count": "Hakijoita", "year": "Vuosi"},
@@ -472,7 +470,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="priority", y="count", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Millä prioriteetilla ensimmäinen {university} liittyvä hakukohde on",
                 labels={"priority": "Prioriteetti", "count": "Hakijoita", "year": "Vuosi"},
             )
@@ -514,7 +512,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="exam", y="count", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 category_orders={"exam": sorted(df["exam"].unique())},
                 title=f"Valintakokeiden jakauma koulutusalan {study_field} hakijoilla",
                 labels={"exam": "Valintakoe", "count": "Hakijoita", "year": "Vuosi"},
@@ -554,7 +552,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="exam_count", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Valintakokeiden määrä koulutusalan {study_field} hakijoilla",
                 labels={"exam_count": "Valintakokeiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -600,7 +598,7 @@ with ui.navset_tab():
             fig = px.bar(
                 df, x="wish_count", y="participants", color="year", barmode="group",
                 text="text",
-                color_discrete_map=YEAR_COLORS,
+                color_discrete_map=styles.YEAR_COLORS,
                 title=f"Hakutoiveiden määrä koulutusalan {study_field} hakijoilla {title_suffix}",
                 labels={"wish_count": "Hakutoiveiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
@@ -633,7 +631,7 @@ with ui.navset_tab():
             }
 
             if not distribution:
-                return px.treemap(title="Ladataan dataa...")
+                return styles.apply_treemap_style(px.treemap(title="Ladataan dataa..."))
 
             top_filter = 20
             filtered = dict(sorted(distribution.items(), key=lambda item: item[1], reverse=True)[:top_filter])
@@ -643,7 +641,7 @@ with ui.navset_tab():
             for sp, count in filtered.items():
                 name = sp_data[sp]["name"] if sp in sp_data else "tuntematon"
                 university = sp_data[sp]["university"] if sp in sp_data else "tuntematon"
-                color = styles.EXAM_COLORS.get(sp_data[sp]["exam"], "#333333") if sp in sp_data else "#333333"
+                color = styles.EXAM_COLORS.get(sp_data[sp]["exam"], styles.UNKNOWN_COLOR) if sp in sp_data else styles.UNKNOWN_COLOR
                 data.append({"study_programme": name, "university": university, "label": f"{name} ({university})", "count": count, "color": color})
 
             df = pd.DataFrame(data)
@@ -654,9 +652,10 @@ with ui.navset_tab():
                 ids="label",
                 names="study_programme",
                 color="color",
+                color_discrete_map={c: c for c in df["color"]},
                 title=f"Hakukohteen {sp_name} ristihakukohteet",
             )
-            return fig
+            return styles.apply_treemap_style(fig)
 
         @render_plotly
         def participant_exam_count_histogram_study_programme():
@@ -674,7 +673,7 @@ with ui.navset_tab():
             fig = px.bar(
                 x=keys,
                 y=values,
-                title=f"Hakukohteen {sp_name}\nhakijoiden valintakokeiden määrä",
+                title=f"Hakukohteen {sp_name} hakijoiden valintakokeiden määrä",
                 text=text,
                 labels={"x": "Valintakokeiden määrä", "y": "Hakijoita"},
             )
