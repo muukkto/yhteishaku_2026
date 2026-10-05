@@ -49,12 +49,14 @@ for year in years:
     # 4. Wish distribution per exam (which priority slot the exam first appears at)
     wish_distribution = {exam: {} for exam in exam_list}
     for application in applications.values():
+        seen_exams = set()
         for i in range(1, 7):
             sp = application["study_programmes"][str(i)]
             if sp and sp in study_programmes:
                 exam = study_programmes[sp]['exam']
-                wish_distribution[exam][i] = wish_distribution[exam].get(i, 0) + 1
-                break
+                if exam not in seen_exams:
+                    seen_exams.add(exam)
+                    wish_distribution[exam][i] = wish_distribution[exam].get(i, 0) + 1
 
     # 5. Wish count distribution (known/unknown/all study programmes per applicant)
     wish_count_dist = {"known": {}, "unknown": {}, "all": {}}
