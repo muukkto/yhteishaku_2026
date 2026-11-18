@@ -196,7 +196,7 @@ with ui.navset_tab():
                 title="Hakijoiden valintakokeiden määrä",
                 labels={"count": "Valintakokeiden määrä", "participants": "Hakijoita", "year": "Vuosi"},
             )
-            return styles.apply_bar_style(fig)
+            return styles.apply_bar_style(fig, y_mode=styles.Y_MODE_PERCENT)
 
         ui.input_switch("exam_switch", "Tarkastele vain yliopistojen valintakokeita käyttäviä hakutoiveita", False)
 
