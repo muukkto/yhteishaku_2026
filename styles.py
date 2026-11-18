@@ -74,6 +74,10 @@ BASE_TOP_MARGIN = 60
 
 SMALL_AXIS_MAX = 10
 
+Y_MODE_ABSOLUTE = "absolute"
+Y_MODE_PERCENT = "percent"
+PERCENT_AXIS_TITLE = "Osuus (%)"
+
 HEATMAP_SIZE = 700
 HEATMAP_MARGIN = dict(l=100, r=150, t=80, b=100)
 
@@ -92,16 +96,41 @@ def wrap_title(fig):
     return fig
 
 
-def apply_bar_style(fig):
-    """Yhteinen tyyli kaikille bar charteille."""
+def _to_percent(fig):
+    """Muuttaa jokaisen sarjan (esim. vuoden) y-arvot prosenteiksi sarjan summasta."""
+    y_title = fig.layout.yaxis.title.text
+    for trace in fig.data:
+        if trace.y is None or len(trace.y) == 0:
+            continue
+        total = sum(trace.y)
+        trace.y = [y / total * 100 if total > 0 else 0 for y in trace.y]
+        if trace.hovertemplate:
+            hover = trace.hovertemplate.replace("%{y}", "%{y:.1f} %")
+            if y_title:
+                hover = hover.replace(f"{y_title}=", f"{PERCENT_AXIS_TITLE}=")
+            trace.hovertemplate = hover
+    fig.update_layout(yaxis=dict(title_text=PERCENT_AXIS_TITLE, tickformat=",.1~f", ticksuffix=" %"))
+
+
+def apply_bar_style(fig, y_mode=Y_MODE_ABSOLUTE):
+    """Yhteinen tyyli kaikille bar charteille.
+
+    y_mode: Y_MODE_ABSOLUTE näyttää y-akselilla lukumäärät, Y_MODE_PERCENT
+    osuudet prosentteina kunkin sarjan (värin) summasta.
+    """
     fig.update_layout(
         xaxis=dict(tickformat=",d", dtick=1),
         yaxis=dict(tickformat=",d"),
     )
-    # Pienillä arvoilla Plotly valitsisi jakoväliksi 0,5, jolloin kokonaislukumuoto toistaisi merkintöjä
-    y_max = max((max(trace.y) for trace in fig.data if trace.y is not None and len(trace.y) > 0), default=0)
-    if y_max < SMALL_AXIS_MAX:
-        fig.update_yaxes(dtick=1)
+    if y_mode == Y_MODE_PERCENT:
+        _to_percent(fig)
+    elif y_mode == Y_MODE_ABSOLUTE:
+        # Pienillä arvoilla Plotly valitsisi jakoväliksi 0,5, jolloin kokonaislukumuoto toistaisi merkintöjä
+        y_max = max((max(trace.y) for trace in fig.data if trace.y is not None and len(trace.y) > 0), default=0)
+        if y_max < SMALL_AXIS_MAX:
+            fig.update_yaxes(dtick=1)
+    else:
+        raise ValueError(f"Tuntematon y_mode: {y_mode}")
     return wrap_title(fig)
 
 
